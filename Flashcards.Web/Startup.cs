@@ -46,7 +46,7 @@ namespace Flashcards.Web
 			{
 				endpoints.MapControllerRoute(
 					name: "default",
-					pattern: "{controller=Home}/{action=Index}/{id?}");
+					pattern: "{controller=Flashcards}/{action=Index}/{id?}");
 			});
 		}
 	}
