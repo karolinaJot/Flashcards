@@ -5,7 +5,9 @@
     background: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
 }
 
 * {
@@ -15,10 +17,28 @@
     }
 }
 
-#root {
-    position: absolute;
-    width: 100% !important;
-    height: 100% !important;
+.box {
+    margin: 0 auto;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
-    flex-flow: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
 }
