@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Flashcards.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,24 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
+		[HttpGet]
+		public IActionResult ShowForm()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult ShowForm(JSFlashcardsModel jSFlashcard)
+		{
+
+			var flashcardJS = new JSFlashcardsAddedModel
+			{
+				TitleJs = jSFlashcard.Title,
+				DescriptionJs = jSFlashcard.Description
+			};
+
+			return View("JSFlashcardsAdded", flashcardJS);
+		}
 
 	}
 }
