@@ -9,6 +9,13 @@ namespace Flashcards.Web.Controllers
 {
 	public class FlashcardsController : Controller
 	{
+
+		private readonly ApplicationDbContext _dbContext;
+		public FlashcardsController(ApplicationDbContext dbContext)
+		{
+			_dbContext = dbContext;
+		}
+
 		public IActionResult Index()
 		{
 			return View();
@@ -20,17 +27,41 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
-		[HttpPost]
-		public IActionResult ShowForm(JSFlashcardsModel jSFlashcard)
-		{
+		//[HttpPost]
+		//public IActionResult ShowForm(JSFlashcardsModel jSFlashcard)
+		//{
 
-			var flashcardJS = new JSFlashcardsAddedModel
+		//	var flashcardJS = new JSFlashcardsAddedModel
+		//	{
+		//		TitleJs = jSFlashcard.Title,
+		//		DescriptionJs = jSFlashcard.Description
+		//	};
+
+		//	return View("JSFlashcardsAdded", flashcardJS);
+		//}
+
+
+		[HttpPost]
+		public IActionResult Add(JSFlashcardsModel jsFlashcard)
+		{
+			var flashcardCreated = new JSFlashcardsModel
 			{
-				TitleJs = jSFlashcard.Title,
-				DescriptionJs = jSFlashcard.Description
+				Title = jsFlashcard.Title,
+				Description = jsFlashcard.Description
 			};
 
-			return View("JSFlashcardsAdded", flashcardJS);
+			_dbContext.JSFlashcard.Add(flashcardCreated);
+			_dbContext.SaveChanges();
+
+			return View("ShowForm");
+		
+		}
+
+
+		[HttpGet]
+		public IActionResult GetAll()
+		{
+			return Json(new { data = _dbContext.JSFlashcard.ToList() });
 		}
 
 	}
