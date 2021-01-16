@@ -8,6 +8,7 @@
     position: absolute;
     display: flex;
     flex-flow: column;
+    background-color: #f2f2f2;
 }
 
 * {
@@ -41,4 +42,13 @@
     @media (min-width: 1200px) {
         max-width: 1140px;
     }
+}
+
+.main {
+    flex: auto;
+    align-items: flex-start;
+    padding-top: 130px;
+}
+.footer {
+    padding: 40px 0 16px 0;
 }
