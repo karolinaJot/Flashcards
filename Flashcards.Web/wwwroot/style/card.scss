@@ -1,45 +1,122 @@
 ﻿.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 32px 16px;
-    min-height: 400px;
-    margin: 24px;
-    transform: scale(1);
+    padding: 24px;
+    flex: 0 0 33.333%;
 
-    &:hover {
-        cursor: pointer;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        transform: scale(1.06);
+    @media screen and (max-width: 600px) {
+        padding: 16px;
+           flex: 0 0 100%;
     }
 
     &--html {
-        background-color: #F16529;
+        .card__main {
+            background-color: #F16529;
+        }
     }
 
     &--css {
-        background-color: #2965F1;
+        .card__main {
+            background-color: #2965F1;
+        }
     }
 
     &--js {
-        background-color: #F7DF1E;
+        .card__main {
+            background-color: #F7DF1E;
+        }
     }
 
-    &__logo-container {
-        width: 250px;
-        height: 250px;
+    &--vue {
+        .card__main {
+            background-color: #376467;
+        }
+    }
+
+    &--angular {
+        .card__main {
+            background-color: #C3002F;
+        }
+    }
+
+    &--react {
+        .card__main {
+            background-color: #000;
+        }
+    }
+
+    &__container {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        min-height: 350px;
+        transform: scale(1);
+        position: relative;
+        border-radius: 24px;
+        flex: 0 0 33.333333%;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            transform: scale(1.06);
+        }
+    }
+
+    &__main {
+        height: 222px;
+        width: 100%;
     }
 
     &__logo {
         width: 100%;
-        height: auto;
+        height: 100%;
         max-height: 100%;
+        background-repeat: no-repeat;
+
+        &--js {
+            background-size: 132%;
+            background-position: bottom;
+            background-image: url("../assets/images/javascript.svg");
+        }
+
+        &--css {
+            background-size: 62%;
+            background-position: center;
+            background-image: url("../assets/images/css.svg");
+        }
+
+        &--html {
+            background-size: cover;
+            background-position: center;
+            background-image: url("../assets/images/html.svg");
+        }
+
+        &--angular {
+            background-size: contain;
+            background-position: center;
+            background-image: url("../assets/images/angular.svg");
+        }
+
+        &--react {
+            background-size: contain;
+            background-position: center;
+            background-image: url("../assets/images/react.svg");
+        }
+
+        &--vue {
+            background-size: cover;
+            background-position: center;
+            background-image: url("../assets/images/vue.svg");
+        }
+    }
+
+    &__description {
+        flex: auto;
+        background-color: #FFFFFF;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
