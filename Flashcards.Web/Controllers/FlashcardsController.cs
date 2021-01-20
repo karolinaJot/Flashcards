@@ -16,16 +16,16 @@ namespace Flashcards.Web.Controllers
 		{
 			_dbContext = dbContext;
 		}
-
+		[HttpGet]
 		public IActionResult Index()
 		{
 			return View();
 		}
-
-		public IActionResult DisplayJS()
-		{
-			return View();
-		}
+		//[HttpGet]
+		//public IActionResult DisplayJS()
+		//{
+		//	return View();
+		//}
 
 		[HttpGet]
 		public IActionResult ShowForm()
@@ -50,12 +50,16 @@ namespace Flashcards.Web.Controllers
 		}
 
 
-		//[HttpGet]
-		//public IActionResult DisplayJS()
-		//{
-		//	ViewBag.FlashcardsJS = _dbContext.FlashcardsJS;
-		//	return View();
-		//}
+		[HttpGet]
+		public IActionResult DisplayJS()
+		{
+			var flashcards = _dbContext.FlashcardsJS.ToList();
+
+			if (flashcards == null) return NotFound("There is nothing to see");
+
+			return Ok(flashcards);
+
+		}
 
 	}
 }
