@@ -1,12 +1,16 @@
-﻿@model FlashcardJsEntity
+﻿
 
 <h1>Hello from JS flashcard</h1>
 <div>
 	<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
 </div>
 
-@foreach (var flashcardJs in Flashcards)
-{
-<div>@flashcardJs.Title </div>
-<div>@flashcardJs.Description</div>
-}
+<div>
+	<ul>
+		@foreach (var flashcard in ViewBag.FlashcardsJS)
+		{ 
+			<li>@flashcard.Title<span>Description: @flashcard.Description</span></li>		
+		}
+	</ul>
+</div>
+

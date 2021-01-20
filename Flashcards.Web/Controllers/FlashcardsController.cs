@@ -34,7 +34,7 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Add(JSFlashcardsModel jsFlashcard)
+		public IActionResult ShowForm(JSFlashcardsModel jsFlashcard)
 		{
 			var flashcardCreated = new FlashcardJsEntity
 			{
@@ -45,7 +45,9 @@ namespace Flashcards.Web.Controllers
 			_dbContext.FlashcardsJS.Add(flashcardCreated);
 			_dbContext.SaveChanges();
 
-			return RedirectToAction("Index");
+			
+
+			return RedirectToAction("DisplayJS");
 		
 		}
 
@@ -53,11 +55,9 @@ namespace Flashcards.Web.Controllers
 		[HttpGet]
 		public IActionResult DisplayJS()
 		{
-			var flashcards = _dbContext.FlashcardsJS.ToList();
+			ViewBag.FlashcardsJS = _dbContext.FlashcardsJS;
 
-			if (flashcards == null) return NotFound("There is nothing to see");
-
-			return Ok(flashcards);
+			return View();
 
 		}
 
