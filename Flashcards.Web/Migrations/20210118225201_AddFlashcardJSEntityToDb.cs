@@ -2,12 +2,12 @@
 
 namespace Flashcards.Web.Migrations
 {
-    public partial class AddJSFlascardsToDB : Migration
+    public partial class AddFlashcardJSEntityToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "JSFlashcard",
+                name: "FlashcardsJS",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,14 +17,14 @@ namespace Flashcards.Web.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_JSFlashcard", x => x.Id);
+                    table.PrimaryKey("PK_FlashcardsJS", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "JSFlashcard");
+                name: "FlashcardsJS");
         }
     }
 }

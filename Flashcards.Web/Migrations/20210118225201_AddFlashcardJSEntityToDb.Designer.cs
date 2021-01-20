@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Flashcards.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210112121551_AddJSFlascardsToDB")]
-    partial class AddJSFlascardsToDB
+    [Migration("20210118225201_AddFlashcardJSEntityToDb")]
+    partial class AddFlashcardJSEntityToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace Flashcards.Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Flashcards.Web.Models.JSFlashcardsModel", b =>
+            modelBuilder.Entity("Flashcards.Web.Entities.FlashcardJsEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -35,7 +35,7 @@ namespace Flashcards.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("JSFlashcard");
+                    b.ToTable("FlashcardsJS");
                 });
 #pragma warning restore 612, 618
         }

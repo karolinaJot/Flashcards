@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Flashcards.Web.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace Flashcards.Web.Models
 
 		}
 
-		public DbSet<JSFlashcardsModel> JSFlashcard { get; set; }
+		public DbSet<FlashcardJsEntity> FlashcardsJS { get; set; }
 	}
 }

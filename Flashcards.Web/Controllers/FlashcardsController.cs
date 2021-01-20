@@ -1,4 +1,5 @@
 ﻿using Flashcards.Web.Models;
+using Flashcards.Web.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -27,42 +28,29 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
-		//[HttpPost]
-		//public IActionResult ShowForm(JSFlashcardsModel jSFlashcard)
-		//{
-
-		//	var flashcardJS = new JSFlashcardsAddedModel
-		//	{
-		//		TitleJs = jSFlashcard.Title,
-		//		DescriptionJs = jSFlashcard.Description
-		//	};
-
-		//	return View("JSFlashcardsAdded", flashcardJS);
-		//}
-
-
 		[HttpPost]
-		public IActionResult Add(JSFlashcardsModel jsFlashcard)
+		public IActionResult DisplayJS(JSFlashcardsModel jsFlashcard)
 		{
-			var flashcardCreated = new JSFlashcardsModel
+			var flashcardCreated = new FlashcardJsEntity
 			{
 				Title = jsFlashcard.Title,
 				Description = jsFlashcard.Description
 			};
 
-			_dbContext.JSFlashcard.Add(flashcardCreated);
+			_dbContext.FlashcardsJS.Add(flashcardCreated);
 			_dbContext.SaveChanges();
 
-			return View("ShowForm");
+			return RedirectToAction("Index");
 		
 		}
 
 
-		[HttpGet]
-		public IActionResult GetAll()
-		{
-			return Json(new { data = _dbContext.JSFlashcard.ToList() });
-		}
+		//[HttpGet]
+		//public IActionResult DisplayJS()
+		//{
+		//	ViewBag.FlashcardsJS = _dbContext.FlashcardsJS;
+		//	return View();
+		//}
 
 	}
 }

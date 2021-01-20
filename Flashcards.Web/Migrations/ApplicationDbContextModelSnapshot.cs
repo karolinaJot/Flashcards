@@ -18,7 +18,7 @@ namespace Flashcards.Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Flashcards.Web.Models.JSFlashcardsModel", b =>
+            modelBuilder.Entity("Flashcards.Web.Entities.FlashcardJsEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +33,7 @@ namespace Flashcards.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("JSFlashcard");
+                    b.ToTable("FlashcardsJS");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,6 +1,9 @@
-﻿@model JSFlashcardsModel
+﻿
 
 <h1>Hello from JS flashcard</h1>
 
-<div>@Model.Title </div>
-<div>@Model.Description</div>
+@foreach (var flashcardJs in ViewBag.FlashcardsJS)
+{
+<div>@flashcardJs.Title </div>
+<div>@flashcardJs.Description</div>
+}
