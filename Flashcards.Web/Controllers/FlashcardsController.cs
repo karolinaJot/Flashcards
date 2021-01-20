@@ -22,6 +22,11 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
+		public IActionResult DisplayJS()
+		{
+			return View();
+		}
+
 		[HttpGet]
 		public IActionResult ShowForm()
 		{
@@ -29,7 +34,7 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult DisplayJS(JSFlashcardsModel jsFlashcard)
+		public IActionResult Add(JSFlashcardsModel jsFlashcard)
 		{
 			var flashcardCreated = new FlashcardJsEntity
 			{

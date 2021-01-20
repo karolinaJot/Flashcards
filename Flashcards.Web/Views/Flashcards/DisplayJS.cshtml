@@ -1,9 +1,12 @@
 ﻿
 
 <h1>Hello from JS flashcard</h1>
+<div>
+	<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
+</div>
 
-@foreach (var flashcardJs in ViewBag.FlashcardsJS)
+@*@foreach (var flashcardJs in ViewBag.FlashcardsJS)
 {
 <div>@flashcardJs.Title </div>
 <div>@flashcardJs.Description</div>
-}
+}*@
