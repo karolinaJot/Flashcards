@@ -1,1 +1,1 @@
-.home{width:100%;}.home__container{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;}
+.home{width:100%;}.home__header{padding:24px;height:300px;background-color:white;}.home__header-container{display:flex;align-items:center;height:100%;padding:0 24px;}.home__header-paragraph{font-size:33px;line-height:1.3;font-weight:700;}.home__container{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;}

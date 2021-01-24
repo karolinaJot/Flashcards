@@ -3,27 +3,39 @@
 }
 
 <section class="home">
-    <div class="home__container">
 
-        <div class="card card--js">
-            <div class="card__container">
+    <div class="home__header">
+        <div class="home__header-container box">
+            <p class="home__header-paragraph">
+                Hi!
+                <br />
+                What skill you develope today?
+                <br />
+                Pick up! But remeber,
+                <br />
+                You can choose any issue from below that you want, so long as it is JS.
+            </p>
+        </div>
+    </div>
+
+    <div class="home__container box">
+
+        <a asp-controller="Flashcards" asp-action="DisplayJS" alt="javascript card" class="card card--js">
+            <div class="card__container card--enabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--js">
-                        @*<img class="card__logo" src="./assets/images/javascript.svg" alt="javascript logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--js"></div>
                 </div>
                 <div class="card__description">
-                    JS
+                    Javascript
                 </div>
             </div>
-        </div>
+        </a>
+
 
         <div class="card card--css">
-            <div class="card__container">
+            <div class="card__container card--disabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--css">
-                        @*<img class="card__logo" src="./assets/images/css.svg" alt="css logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--css"></div>
                 </div>
                 <div class="card__description">
                     CSS
@@ -33,11 +45,9 @@
 <a asp-controller="Flashcards" asp-action="DisplayJS">JAVASCRIPT</a> 
 
         <div class="card card--html">
-            <div class="card__container">
+            <div class="card__container card--disabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--html">
-                        @*<img class="card__logo" src="./assets/images/html.svg" alt="html logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--html"></div>
                 </div>
                 <div class="card__description">
                     HTML
@@ -49,11 +59,9 @@
         </div>
 
         <div class="card card--angular">
-            <div class="card__container">
+            <div class="card__container card--disabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--angular">
-                        @*<img class="card__logo" src="./assets/images/javascript.svg" alt="javascript logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--angular"></div>
                 </div>
                 <div class="card__description">
                     Angular
@@ -62,24 +70,20 @@
         </div>
 
         <div class="card card--vue">
-            <div class="card__container">
+            <div class="card__container card--disabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--vue">
-                        @*<img class="card__logo" src="./assets/images/javascript.svg" alt="javascript logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--vue"></div>
                 </div>
                 <div class="card__description">
-                    Vue
+                    Vue.js
                 </div>
             </div>
         </div>
 
         <div class="card card--react">
-            <div class="card__container">
+            <div class="card__container card--disabled">
                 <div class="card__main">
-                    <div class="card__logo card__logo--react">
-                        @*<img class="card__logo" src="./assets/images/javascript.svg" alt="javascript logo" />*@
-                    </div>
+                    <div class="card__logo card__logo--react"></div>
                 </div>
                 <div class="card__description">
                     React

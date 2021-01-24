@@ -25,7 +25,6 @@
     margin-left: auto;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
 
     @media (min-width: 576px) and (max-width: 767px) {
         max-width: 540px;
@@ -47,7 +46,6 @@
 .main {
     flex: auto;
     align-items: flex-start;
-    padding-top: 24px;
 }
 .footer {
     padding: 40px 0 16px 0;

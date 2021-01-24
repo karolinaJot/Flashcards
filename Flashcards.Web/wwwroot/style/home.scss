@@ -1,6 +1,25 @@
 ﻿.home {
     width: 100%;
 
+    &__header {
+        padding: 24px;
+        height: 300px;
+        background-color: white;
+    }
+
+    &__header-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 24px;
+    }
+
+    &__header-paragraph {
+        font-size: 33px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
     &__container {
         display: flex;
         justify-content: center;
