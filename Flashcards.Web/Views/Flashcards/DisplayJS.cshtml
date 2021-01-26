@@ -1,16 +1,48 @@
-﻿
+﻿@model List<JSFlashcardsModel>
+
 <div>
 	<button id="btn-switch">Switch View</button>
 </div>
 
-<div>
-	<ul>
-		@foreach (var flashcard in ViewBag.FlashcardsJS)
-		{ 
-			<li>@flashcard.Title<span>Description: @flashcard.Description</span></li>		
-		}
-	</ul>
-</div>
+@{
+	int flashcardsNumber = Model.Count();
+}
+
+@if (flashcardsNumber > 0)
+{
+
+	<div id="flashcard-container">
+
+		<div id="flashcard-title">
+			@Model[1].Title;
+
+		</div>
+
+		<div id="flashcard-description">
+
+
+		</div>
+
+	</div>
+}
+else
+{
+	<p>Sorry, there is no flashcards available.</p>
+}
+
+
+
+
+@*@{int id = 0;}
+	<div>
+		<ul>
+			@foreach (var flashcard in ViewBag.FlashcardsJS)
+			{
+				id = flashcard.Id;
+				<li>@flashcard.Title<span>Description: @flashcard.Description</span></li>
+			}
+		</ul>
+	</div>*@
 
 @*TODO: checkbox Learnt*@
 
@@ -25,7 +57,7 @@
 		<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
 	</div>
 	<div>
-		<a asp-controller="Flashcards" asp-action="ShowForm">Edit</a>
+		<a asp-route-id="" asp-controller="Flashcards" asp-action="ShowForm">Edit</a>
 	</div>
 	<div>
 		<a asp-controller="Flashcards" asp-action="Delete">Delete</a>
