@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Flashcards.Web.Controllers
 {
@@ -21,11 +22,7 @@ namespace Flashcards.Web.Controllers
 		{
 			return View();
 		}
-		//[HttpGet]
-		//public IActionResult DisplayJS()
-		//{
-		//	return View();
-		//}
+		
 
 		[HttpGet]
 		public IActionResult ShowForm()
@@ -60,6 +57,23 @@ namespace Flashcards.Web.Controllers
 			return View();
 
 		}
+
+		#region API Calls
+		[HttpDelete]
+		public async Task<IActionResult> Delete(int id)
+		{
+			var flashcardFromDb = await _dbContext.FlashcardsJS.FirstOrDefaultAsync(f => f.Id == id);
+			if (flashcardFromDb == null)
+			{
+				return Json(new { success = false, massage = "Error while Deleting" });
+			}
+			_dbContext.FlashcardsJS.Remove(flashcardFromDb);
+			await _dbContext.SaveChangesAsync();
+			return Json(new { success = true, message = "Delete successful" });
+		}
+
+
+		#endregion
 
 	}
 }
