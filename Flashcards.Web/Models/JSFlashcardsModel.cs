@@ -11,6 +11,5 @@ namespace Flashcards.Web.Models
 		public string Title { get; set; }
 		public string Description { get; set; }
 
-		public List<JSFlashcardsModel> FlashcardsFromDB = new List<JSFlashcardsModel>();
 	}
 }
