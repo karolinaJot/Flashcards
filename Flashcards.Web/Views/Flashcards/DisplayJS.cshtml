@@ -10,16 +10,17 @@
 
 @if (flashcardsNumber > 0)
 {
+	Random random = new Random();
+	int index = random.Next(flashcardsNumber);
 
 	<div id="flashcard-container">
 
 		<div id="flashcard-title">
-			@Model[1].Title;
-
+			@Model[index].Title
 		</div>
 
 		<div id="flashcard-description">
-
+			@Model[index].Description
 
 		</div>
 
@@ -30,19 +31,6 @@ else
 	<p>Sorry, there is no flashcards available.</p>
 }
 
-
-
-
-@*@{int id = 0;}
-	<div>
-		<ul>
-			@foreach (var flashcard in ViewBag.FlashcardsJS)
-			{
-				id = flashcard.Id;
-				<li>@flashcard.Title<span>Description: @flashcard.Description</span></li>
-			}
-		</ul>
-	</div>*@
 
 @*TODO: checkbox Learnt*@
 
