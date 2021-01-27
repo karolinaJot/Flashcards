@@ -100,17 +100,31 @@ namespace Flashcards.Web.Controllers
 		}
 
 		#region API Calls
+		//[HttpDelete]
+		//public async Task<IActionResult> Delete(int id)
+		//{
+		//	var flashcardFromDb = await _dbContext.FlashcardsJS.FirstOrDefaultAsync(f => f.Id == id);
+		//	if (flashcardFromDb == null)
+		//	{
+		//		return Json(new { success = false, massage = "Error while Deleting" });
+		//	}
+		//	_dbContext.FlashcardsJS.Remove(flashcardFromDb);
+		//	await _dbContext.SaveChangesAsync();
+		//	return Json(new { success = true, message = "Delete successful" });
+		//}
+		[Route("Flashcards/Delete/{id}")]
 		[HttpDelete]
-		public async Task<IActionResult> Delete(int id)
+		public IActionResult Delete(int id)
 		{
-			var flashcardFromDb = await _dbContext.FlashcardsJS.FirstOrDefaultAsync(f => f.Id == id);
-			if (flashcardFromDb == null)
+			var dataToDelete = _dbContext.FlashcardsJS.Find(id);
+			if (dataToDelete == null)
 			{
-				return Json(new { success = false, massage = "Error while Deleting" });
+				return NotFound();
 			}
-			_dbContext.FlashcardsJS.Remove(flashcardFromDb);
-			await _dbContext.SaveChangesAsync();
-			return Json(new { success = true, message = "Delete successful" });
+			_dbContext.FlashcardsJS.Remove(dataToDelete);
+			_dbContext.SaveChanges();
+
+			return RedirectToAction("Index");
 		}
 
 
