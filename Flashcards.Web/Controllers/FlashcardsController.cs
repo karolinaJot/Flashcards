@@ -80,6 +80,25 @@ namespace Flashcards.Web.Controllers
 			return View(flashcardToEdit);
 		}
 
+		[HttpPost]
+		public IActionResult Edit(JSFlashcardsModel flashcardEdited)
+		{
+			var data = new FlashcardJsEntity
+			{
+				Title = flashcardEdited.Title,
+				Description = flashcardEdited.Description,
+				Id = flashcardEdited.Id
+			};
+
+			var dataFromDb = _dbContext.FlashcardsJS.Find(data.Id);
+			dataFromDb.Title = data.Title;
+			dataFromDb.Description = data.Description;
+
+			_dbContext.SaveChanges();
+
+			return RedirectToAction("DisplayJS");
+		}
+
 		#region API Calls
 		[HttpDelete]
 		public async Task<IActionResult> Delete(int id)
