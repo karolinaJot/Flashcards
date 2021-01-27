@@ -6,12 +6,14 @@
 
 @{
 	int flashcardsNumber = Model.Count();
+	int id = 0;
 }
 
 @if (flashcardsNumber > 0)
 {
 	Random random = new Random();
 	int index = random.Next(flashcardsNumber);
+	id = Model[index].Id;
 
 	<div id="flashcard-container">
 
@@ -45,7 +47,7 @@ else
 		<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
 	</div>
 	<div>
-		<a asp-route-id="" asp-controller="Flashcards" asp-action="ShowForm">Edit</a>
+		<a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
 	</div>
 	<div>
 		<a asp-controller="Flashcards" asp-action="Delete">Delete</a>

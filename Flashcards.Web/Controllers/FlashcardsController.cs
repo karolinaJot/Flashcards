@@ -67,6 +67,19 @@ namespace Flashcards.Web.Controllers
 			return View(flashcardsFromDB);
 		}
 
+		[HttpGet]
+		public async Task <IActionResult> Edit(int id)
+		{
+			FlashcardJsEntity dataFromDb = await _dbContext.FlashcardsJS.FindAsync(id);
+			var flashcardToEdit = new JSFlashcardsModel
+			{
+				Title = dataFromDb.Title,
+				Description = dataFromDb.Description,
+				Id = dataFromDb.Id
+			};
+			return View(flashcardToEdit);
+		}
+
 		#region API Calls
 		[HttpDelete]
 		public async Task<IActionResult> Delete(int id)
