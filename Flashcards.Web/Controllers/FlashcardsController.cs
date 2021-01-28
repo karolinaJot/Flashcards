@@ -41,14 +41,9 @@ namespace Flashcards.Web.Controllers
 
 			_dbContext.FlashcardsJS.Add(flashcardCreated);
 			_dbContext.SaveChanges();
-
-			
-
 			return RedirectToAction("DisplayJS");
-		
 		}
 		
-
 		[HttpGet]
 		public IActionResult DisplayJS()
 		{
@@ -95,40 +90,42 @@ namespace Flashcards.Web.Controllers
 			dataFromDb.Description = data.Description;
 
 			_dbContext.SaveChanges();
-
 			return RedirectToAction("DisplayJS");
 		}
 
-		#region API Calls
-		//[HttpDelete]
-		//public async Task<IActionResult> Delete(int id)
-		//{
-		//	var flashcardFromDb = await _dbContext.FlashcardsJS.FirstOrDefaultAsync(f => f.Id == id);
-		//	if (flashcardFromDb == null)
-		//	{
-		//		return Json(new { success = false, massage = "Error while Deleting" });
-		//	}
-		//	_dbContext.FlashcardsJS.Remove(flashcardFromDb);
-		//	await _dbContext.SaveChangesAsync();
-		//	return Json(new { success = true, message = "Delete successful" });
-		//}
-		[Route("Flashcards/Delete/{id}")]
-		[HttpDelete]
-		public IActionResult Delete(int id)
+		[HttpGet]
+		public IActionResult Delete(int? id)
 		{
-			var dataToDelete = _dbContext.FlashcardsJS.Find(id);
+			if (id == null)
+			{
+				return NotFound();
+			}
+
+			var dataToDelete = _dbContext.FlashcardsJS.FirstOrDefault(f => f.Id == id);
 			if (dataToDelete == null)
 			{
 				return NotFound();
 			}
-			_dbContext.FlashcardsJS.Remove(dataToDelete);
-			_dbContext.SaveChanges();
-
-			return RedirectToAction("Index");
+			var flashcardToDelete = new JSFlashcardsModel
+			{
+				Title = dataToDelete.Title,
+				Description = dataToDelete.Description,
+				Id = dataToDelete.Id
+			};
+			return View(flashcardToDelete);
+		
 		}
 
+		[HttpPost, ActionName("Delete")]
+		public IActionResult DeleteConfirmed(int id)
+		{
+			var data = _dbContext.FlashcardsJS.Find(id);
+			_dbContext.FlashcardsJS.Remove(data);
+			_dbContext.SaveChanges();
+			return RedirectToAction("DisplayJS");
+		}
 
-		#endregion
+		
 
 	}
 }
