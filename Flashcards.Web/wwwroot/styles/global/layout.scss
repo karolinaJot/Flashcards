@@ -23,8 +23,6 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    align-items: center;
 
     @media (min-width: 576px) and (max-width: 767px) {
         max-width: 540px;
@@ -45,7 +43,6 @@
 
 .main {
     flex: auto;
-    align-items: flex-start;
 }
 .footer {
     padding: 40px 0 16px 0;

@@ -1,4 +1,4 @@
-﻿.card {
+﻿.category-card {
     padding: 24px;
     flex: 0 0 33.333%;
 
@@ -8,37 +8,37 @@
     }
 
     &--html {
-        .card__main {
+        .category-card__main {
             background-color: #F16529;
         }
     }
 
     &--css {
-        .card__main {
+        .category-card__main {
             background-color: #2965F1;
         }
     }
 
     &--js {
-        .card__main {
+        .category-card__main {
             background-color: #F7DF1E;
         }
     }
 
     &--vue {
-        .card__main {
+        .category-card__main {
             background-color: #376467;
         }
     }
 
     &--angular {
-        .card__main {
+        .category-card__main {
             background-color: #C3002F;
         }
     }
 
     &--react {
-        .card__main {
+        .category-card__main {
             background-color: #000;
         }
     }
@@ -89,37 +89,37 @@
         &--js {
             background-size: 132%;
             background-position: bottom;
-            background-image: url("../assets/images/javascript.svg");
+            background-image: url("../../assets/images/javascript.svg");
         }
 
         &--css {
             background-size: 62%;
             background-position: center;
-            background-image: url("../assets/images/css.svg");
+            background-image: url("../../assets/images/css.svg");
         }
 
         &--html {
             background-size: cover;
             background-position: center;
-            background-image: url("../assets/images/html.svg");
+            background-image: url("../../assets/images/html.svg");
         }
 
         &--angular {
             background-size: contain;
             background-position: center;
-            background-image: url("../assets/images/angular.svg");
+            background-image: url("../../assets/images/angular.svg");
         }
 
         &--react {
             background-size: contain;
             background-position: center;
-            background-image: url("../assets/images/react.svg");
+            background-image: url("../../assets/images/react.svg");
         }
 
         &--vue {
             background-size: cover;
             background-position: center;
-            background-image: url("../assets/images/vue.svg");
+            background-image: url("../../assets/images/vue.svg");
         }
     }
 
