@@ -1,16 +1,55 @@
-﻿
-
-<h1>Hello from JS flashcard</h1>
-<div>
-	<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
-</div>
+﻿@model List<JSFlashcardsModel>
 
 <div>
-	<ul>
-		@foreach (var flashcard in ViewBag.FlashcardsJS)
-		{ 
-			<li>@flashcard.Title<span>Description: @flashcard.Description</span></li>		
-		}
-	</ul>
+	<button id="btn-switch">Switch View</button>
 </div>
 
+@{
+	int flashcardsNumber = Model.Count();
+	int id = 0;
+}
+
+@if (flashcardsNumber > 0)
+{
+	Random random = new Random();
+	int index = random.Next(flashcardsNumber);
+	id = Model[index].Id;
+
+	<div id="flashcard-container">
+
+		<div id="flashcard-title">
+			@Model[index].Title
+		</div>
+
+		<div id="flashcard-description">
+			@Model[index].Description
+
+		</div>
+
+	</div>
+}
+else
+{
+	<p>Sorry, there is no flashcards available.</p>
+}
+
+
+@*TODO: checkbox Learnt*@
+
+<div id="nav">
+	<button id="prev">Previous</button>
+	<button id="next">Next</button>
+
+</div>
+
+<div id="btn-container">
+	<div>
+		<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
+	</div>
+	<div>
+		<a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
+	</div>
+	<div>
+		<a asp-route-id="@id"  asp-controller="Flashcards" asp-action="Delete">Delete</a>
+	</div>
+</div>
