@@ -1,1 +1,1 @@
-.header__logo{height:24px;width:24px;margin:0 4px;}
+.header{display:flex;align-items:center;padding:24px;font-size:20px;font-weight:500;}@media screen and (max-width: 600px){.header{padding:16px;}}.header__logo-container{display:flex;margin-right:16px;font-family:"Lato-Bold";}.header__logo{height:24px;width:24px;margin-right:8px;}

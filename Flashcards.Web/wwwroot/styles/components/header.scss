@@ -1,7 +1,26 @@
 ﻿.header {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    font-size: 20px;
+    font-weight: 500;
+
+    @media screen and (max-width: 600px) {
+        padding: 16px;
+    }
+
+    &__navigation {
+    }
+
+    &__logo-container {
+        display: flex;
+        margin-right: 16px;
+        font-family: "Lato-Bold";
+    }
+
     &__logo {
         height: 24px;
         width: 24px;
-        margin: 0 4px;
+        margin-right: 8px;
     }
 }

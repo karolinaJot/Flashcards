@@ -19,7 +19,6 @@
 
     &__header-container {
         display: flex;
-        align-items: center;
         height: 100%;
         padding: 0 16px;
         flex-wrap: wrap;
@@ -29,7 +28,7 @@
     &__header-paragraph {
         font-size: 33px;
         line-height: 1.3;
-        font-weight: 700;
+        font-family: "Lato-Bold";
 
         @media screen and (max-width: 600px) {
             font-size: 20px;
