@@ -7,6 +7,7 @@
     background-color: #FFF;
     height: 60vh;
     align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 600px) {
         min-height: 256px;
@@ -30,15 +31,12 @@
     }
 
     &__header {
-        margin-bottom: 16px;
-        font-family: "Lato-Bold";
         text-align: center;
-        font-size: 32px;
+        margin-bottom: 16px;
 
         @media screen and (max-width: 600px) {
             text-align: left;
         }
-
     }
 
     &__label {
