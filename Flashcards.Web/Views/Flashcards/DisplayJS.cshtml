@@ -2,7 +2,14 @@
 
 <section class="flashcards-page h-box">
     <div class="flashcards-page__container">
-        <button id="btn-switch" class="flashcards-page__switch-button">Switch View</button>
+
+        <div class="flashcards-page__switch-view-container">
+            <button id="btn-switch" class="button button--secondary">
+                <i class="icon icon--xs icon--switch h-margin-right-8"> </i>
+                Switch View
+            </button>
+        </div>
+
 
         @{
             int flashcardsNumber = Model.Count();
@@ -37,16 +44,25 @@
             <button id="next">Next</button>
         </nav>
 
-        <div id="btn-container">
-            <div>
-                <a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
-            </div>
-            <div>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
-            </div>
-            <div>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete">Delete</a>
-            </div>
+
+
+
+
+
+        <div id="btn-container" class="flashcards-page__buttons-container">
+            <a asp-controller="Flashcards" asp-action="ShowForm" class="button button--secondary flashcards-page__button">
+                <i class="icon icon--xs icon--add h-margin-right-8"> </i>
+                Create
+            </a>
+            <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
+                <i class="icon icon--xs icon--edit h-margin-right-8"> </i>
+                Edit
+            </a>
+            <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
+                <i class="icon icon--xs icon--delete h-margin-right-8"> </i>
+                Delete
+            </a>
         </div>
+
     </div>
 </section>

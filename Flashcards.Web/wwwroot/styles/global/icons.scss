@@ -13,7 +13,27 @@
         height: 24px;
     }
 
+    &--white {
+        background-color: #FFF;
+    }
+
     &--arrow-left {
-        background-image: url("../../assets/images/arrow-left.svg")
+        background-image: url("../../assets/images/arrow-left.svg");
+    }
+
+    &--add {
+        background-image: url("../../assets/images/add.svg");
+    }
+
+    &--delete {
+        background-image: url("../../assets/images/delete.svg");
+    }
+
+    &--edit {
+        background-image: url("../../assets/images/edit.svg");
+    }
+
+    &--switch {
+        background-image: url("../../assets/images/switch.svg");
     }
 }
