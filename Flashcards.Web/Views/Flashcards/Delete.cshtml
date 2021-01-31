@@ -1,18 +1,26 @@
 ﻿@model JSFlashcardsModel
-<h1> Are you sure you want to delete this?</h1>
 
-<form method="post">
-	<div>
-		<button type="submit">YES!</button>
-	</div>
-</form>
-<a asp-controller="Flashcards" asp-action="DisplayJS">NO!</a>
+    <section class="delete-page h-box">
+        <div class="delete-page__container">
 
-<div>
-	<div>
-		@Model.Title;
-	</div>
-	<div>
-		@Model.Description;
-	</div>
-</div>
+            <form method="post" class="form">
+                <div class="delete-page__box-content">
+                    <h1 class="delete-page__heading heading-1 h-margin-bottom-32">Are you sure you want to delete this?</h1>
+                    <div class="delete-page__buttons-container">
+                        <button type="submit" class="button button--primary button--half h-margin-right-8">Confirm</button>
+                        <a asp-controller="Flashcards" asp-action="DisplayJS" class="button button--secondary button--half h-margin-left-8">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+</section>
+
+    <div>
+        <div>
+            @Model.Title;
+        </div>
+        <div>
+            @Model.Description;
+        </div>
+    </div>

@@ -2,11 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-<section class="home">
+<section class="home-page">
 
-    <div class="home__header">
-        <div class="home__header-container box">
-            <p class="home__header-paragraph">
+    <div class="home-page__header">
+        <div class="home-page__header-container h-box">
+            <p class="home-page__header-paragraph">
                 Hi!
                 <br />
                 What skill you develope today?
@@ -18,71 +18,57 @@
         </div>
     </div>
 
-    <div class="home__container box">
+    <div class="home-page__container h-box">
 
-        <a asp-controller="Flashcards" asp-action="DisplayJS" alt="javascript card" class="card card--js">
-            <div class="card__container card--enabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--js"></div>
-                </div>
-                <div class="card__description">
+        <a asp-controller="Flashcards" asp-action="DisplayJS" alt="javascript card" class="category-card">
+            <div class="category-card__container category-card--enabled h-js">
+                <div class="category-card__logo category-card__logo--js"></div>
+                <div class="category-card__description">
                     Javascript
                 </div>
             </div>
         </a>
 
-
-        <div class="card card--css">
-            <div class="card__container card--disabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--css"></div>
-                </div>
-                <div class="card__description">
+        <div class="category-card">
+            <div class="category-card__container category-card--disabled h-css">
+                <div class="category-card__logo category-card__logo--css"></div>
+                <div class="category-card__description">
                     CSS
                 </div>
             </div>
         </div>
 
-
-        <div class="card card--html">
-            <div class="card__container card--disabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--html"></div>
-                </div>
-                <div class="card__description">
+        <div class="category-card">
+            <div class="category-card__container category-card--disabled h-html">
+                <div class="category-card__logo category-card__logo--html"></div>
+                <div class="category-card__description">
                     HTML
                 </div>
             </div>
         </div>
 
-        <div class="card card--angular">
-            <div class="card__container card--disabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--angular"></div>
-                </div>
-                <div class="card__description">
+        <div class="category-card">
+            <div class="category-card__container category-card--disabled h-angular">
+                 <div class="category-card__logo category-card__logo--angular"></div>
+                <div class="category-card__description">
                     Angular
                 </div>
             </div>
         </div>
 
-        <div class="card card--vue">
-            <div class="card__container card--disabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--vue"></div>
-                </div>
-                <div class="card__description">
+        <div class="category-card">
+            <div class="category-card__container category-card--disabled h-vue">
+                 <div class="category-card__logo category-card__logo--vue"></div>
+                <div class="category-card__description">
                     Vue.js
                 </div>
             </div>
         </div>
 
-        <div class="card card--react">
-            <div class="card__container card--disabled">
-                <div class="card__main">
-                    <div class="card__logo card__logo--react"></div>
-                </div>
-                <div class="card__description">
+        <div class="category-card"> 
+            <div class="category-card__container category-card--disabled h-react">
+                 <div class="category-card__logo category-card__logo--react"></div>
+                <div class="category-card__description">
                     React
                 </div>
             </div>

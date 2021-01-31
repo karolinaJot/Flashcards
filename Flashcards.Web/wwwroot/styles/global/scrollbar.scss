@@ -1,0 +1,22 @@
+﻿::-webkit-scrollbar {
+    border-radius: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: #f0f1f3;
+
+    &-track {
+        border-radius: 6px;
+        width: 7px;
+        background-color: transparent;
+
+        &-piece {
+            border-radius: 6px;
+            background-color: #f0f1f3;
+        }
+    }
+
+    &-thumb {
+        border-radius: 6px;
+        background-color: #d5d5ce;
+    }
+}
