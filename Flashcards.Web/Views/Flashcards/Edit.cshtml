@@ -3,15 +3,18 @@
 <section class="edit-page h-box">
     <div class="edit-page__container">
         <form method="post" class="form">
+            <div asp-validation-summary="ModelOnly"></div>
             <div class="form__content">
                 <h1 class="form__header heading-1">Edit Flashcard</h1>
                 <div class="form__group">
                     <label asp-for="Title" class="form__label">Title :</label>
                     <input asp-for="Title" type="text" name="title" placeholder="Flashcard title" class="input h-margin-bottom-8" />
+                    <div asp-validation-for="Title"></div>
                 </div>
                 <div class="form__group">
                     <label asp-for="Description" class="form__label">Description :</label>
                     <textarea asp-for="Description" type="text" name="description" rows="5" placeholder="Flashcard description" rows="5" class="textarea h-margin-bottom-8"> </textarea>
+                    <div asp-validation-for="Description"></div>                
                 </div>
                 <div class="form__group form__buttons-container">
                     <button type="submit" class="button button--primary h-margin-bottom-16">Update</button>
@@ -24,5 +27,3 @@
         </form>
     </div>
 </section>
-
-

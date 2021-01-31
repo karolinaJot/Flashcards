@@ -33,15 +33,19 @@ namespace Flashcards.Web.Controllers
 		[HttpPost]
 		public IActionResult ShowForm(JSFlashcardsModel jsFlashcard)
 		{
-			var flashcardCreated = new FlashcardJsEntity
+			if (ModelState.IsValid)
 			{
-				Title = jsFlashcard.Title,
-				Description = jsFlashcard.Description
-			};
+				var flashcardCreated = new FlashcardJsEntity
+				{
+					Title = jsFlashcard.Title,
+					Description = jsFlashcard.Description
+				};
 
-			_dbContext.FlashcardsJS.Add(flashcardCreated);
-			_dbContext.SaveChanges();
-			return RedirectToAction("DisplayJS");
+				_dbContext.FlashcardsJS.Add(flashcardCreated);
+				_dbContext.SaveChanges();
+				return RedirectToAction("DisplayJS");
+			}
+			return View(jsFlashcard);
 		}
 		
 		[HttpGet]
@@ -78,19 +82,25 @@ namespace Flashcards.Web.Controllers
 		[HttpPost]
 		public IActionResult Edit(JSFlashcardsModel flashcardEdited)
 		{
-			var data = new FlashcardJsEntity
+
+			if (ModelState.IsValid)
 			{
-				Title = flashcardEdited.Title,
-				Description = flashcardEdited.Description,
-				Id = flashcardEdited.Id
-			};
+				var data = new FlashcardJsEntity
+				{
+					Title = flashcardEdited.Title,
+					Description = flashcardEdited.Description,
+					Id = flashcardEdited.Id
+				};
 
-			var dataFromDb = _dbContext.FlashcardsJS.Find(data.Id);
-			dataFromDb.Title = data.Title;
-			dataFromDb.Description = data.Description;
+				var dataFromDb = _dbContext.FlashcardsJS.Find(data.Id);
+				dataFromDb.Title = data.Title;
+				dataFromDb.Description = data.Description;
 
-			_dbContext.SaveChanges();
-			return RedirectToAction("DisplayJS");
+				_dbContext.SaveChanges();
+				return RedirectToAction("DisplayJS");
+			}
+			return View(flashcardEdited);
+
 		}
 
 		[HttpGet]
@@ -113,7 +123,6 @@ namespace Flashcards.Web.Controllers
 				Id = dataToDelete.Id
 			};
 			return View(flashcardToDelete);
-		
 		}
 
 		[HttpPost, ActionName("Delete")]

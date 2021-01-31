@@ -5,17 +5,20 @@
     <div class="form-page__container">
 
         <form method="post" class="form">
+            <span asp-validation-summary="ModelOnly"></span>
             <div class="form__content">
                 <h1 class="form__header heading-1">Add new flashcard</h1>
 
                 <div class="form__group">
                     <label asp-for="Title" class="form__label">Title :</label>
                     <input asp-for="Title" type="text" name="title" placeholder="Flashcard title" class="form__input input" />
+                    <span asp-validation-for="Title"></span>
                 </div>
 
                 <div class="form__group">
                     <label asp-for="Description" class="form__label">Description :</label>
                     <textarea asp-for="Description" rows="5" type="text" name="description" placeholder="Flashcard description" class="textarea h-margin-bottom-8"> </textarea>
+                    <span asp-validation-for="Description"></span>
                 </div>
 
                 <div class="form__group form__buttons-container">
@@ -31,6 +34,3 @@
     </div>
 
 </section>
-
-
-
