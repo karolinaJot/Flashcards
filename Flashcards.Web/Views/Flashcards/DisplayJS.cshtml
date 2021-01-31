@@ -2,51 +2,73 @@
 
 <section class="flashcards-page h-box">
     <div class="flashcards-page__container">
-        <button id="btn-switch" class="flashcards-page__switch-button">Switch View</button>
 
-        @{
-            int flashcardsNumber = Model.Count();
-            int id = 0;
-        }
+        <div class="flashcards-page__switch-view-container">
+            <button id="btn-switch" class="button button--secondary">
+                <i class="icon icon--xs icon--switch h-margin-right-8"> </i>
+                Switch View
+            </button>
+        </div>
 
-        @if (flashcardsNumber > 0)
-        {
-            Random random = new Random();
-            int index = random.Next(flashcardsNumber);
-            id = Model[index].Id;
+        <div class="flashcards-page__main">
+            @{
+                int flashcardsNumber = Model.Count();
+                int id = 0;
+            }
+            <div class="carousel">
+                <button id="prev" class="carousel__prev-button">
+                    <i class="icon icon--md icon--prev"> </i>
+                </button>
+                <div class="carousel__container">
+       
+                        @if (flashcardsNumber > 0)
+                        {
+                            Random random = new Random();
+                            int index = random.Next(flashcardsNumber);
+                            id = Model[index].Id;
 
-            <div id="flashcard-container" class="flashcard">
-                <div id="flashcard-title" class="flashcard__title">
-                    @Model[index].Title
+                            <div id="flashcard-container" class="flashcard h-js">
+                                <div id="flashcard-title" class="flashcard__side">
+                                    <h2 class="flashcard__title"> @Model[index].Title </h2>
+                                </div>
+                                <div id="flashcard-description" class="flashcard__side">
+                                    <h2 class="flashcard__description"> @Model[index].Description </h2>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>Sorry, there is no flashcards available.</p>
+                        }
+     
                 </div>
-                <div id="flashcard-description" class="flashcard__description">
-                    @Model[index].Description
-                </div>
+                <button id="next" class="carousel__next-button">
+                    <i class="icon icon--md icon--next"> </i>
+                </button>
             </div>
-        }
-        else
-        {
-            <p>Sorry, there is no flashcards available.</p>
-        }
+           
+
+            @*TODO: checkbox Learnt*@
+
+            @*<nav id="nav"> </nav>*@
 
 
-        @*TODO: checkbox Learnt*@
 
-        <nav id="nav" class="flashcards-page__navigation">
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
-        </nav>
+            <div id="btn-container" class="flashcards-page__buttons-container">
+                <a asp-controller="Flashcards" asp-action="ShowForm" class="button button--secondary flashcards-page__button">
+                    <i class="icon icon--xs icon--add h-margin-right-8"> </i>
+                    Create
+                </a>
+                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
+                    <i class="icon icon--xs icon--edit h-margin-right-8"> </i>
+                    Edit
+                </a>
+                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
+                    <i class="icon icon--xs icon--delete h-margin-right-8"> </i>
+                    Delete
+                </a>
+            </div>
 
-        <div id="btn-container">
-            <div>
-                <a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
-            </div>
-            <div>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
-            </div>
-            <div>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete">Delete</a>
-            </div>
         </div>
     </div>
 </section>
