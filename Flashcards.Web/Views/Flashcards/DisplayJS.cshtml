@@ -1,55 +1,52 @@
 ﻿@model List<JSFlashcardsModel>
 
-<div>
-	<button id="btn-switch">Switch View</button>
-</div>
+<section class="flashcards-page h-box">
+    <div class="flashcards-page__container">
+        <button id="btn-switch" class="flashcards-page__switch-button">Switch View</button>
 
-@{
-	int flashcardsNumber = Model.Count();
-	int id = 0;
-}
+        @{
+            int flashcardsNumber = Model.Count();
+            int id = 0;
+        }
 
-@if (flashcardsNumber > 0)
-{
-	Random random = new Random();
-	int index = random.Next(flashcardsNumber);
-	id = Model[index].Id;
+        @if (flashcardsNumber > 0)
+        {
+            Random random = new Random();
+            int index = random.Next(flashcardsNumber);
+            id = Model[index].Id;
 
-	<div id="flashcard-container">
-
-		<div id="flashcard-title">
-			@Model[index].Title
-		</div>
-
-		<div id="flashcard-description">
-			@Model[index].Description
-
-		</div>
-
-	</div>
-}
-else
-{
-	<p>Sorry, there is no flashcards available.</p>
-}
+            <div id="flashcard-container" class="flashcard">
+                <div id="flashcard-title" class="flashcard__title">
+                    @Model[index].Title
+                </div>
+                <div id="flashcard-description" class="flashcard__description">
+                    @Model[index].Description
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>Sorry, there is no flashcards available.</p>
+        }
 
 
-@*TODO: checkbox Learnt*@
+        @*TODO: checkbox Learnt*@
 
-<div id="nav">
-	<button id="prev">Previous</button>
-	<button id="next">Next</button>
+        <nav id="nav" class="flashcards-page__navigation">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </nav>
 
-</div>
-
-<div id="btn-container">
-	<div>
-		<a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
-	</div>
-	<div>
-		<a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
-	</div>
-	<div>
-		<a asp-route-id="@id"  asp-controller="Flashcards" asp-action="Delete">Delete</a>
-	</div>
-</div>
+        <div id="btn-container">
+            <div>
+                <a asp-controller="Flashcards" asp-action="ShowForm">Create flashcard</a>
+            </div>
+            <div>
+                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit">Edit</a>
+            </div>
+            <div>
+                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete">Delete</a>
+            </div>
+        </div>
+    </div>
+</section>

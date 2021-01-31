@@ -1,0 +1,51 @@
+﻿.header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #FFF;
+
+    @media screen and (max-width: 600px) {
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+
+    &__navigation {
+        z-index: 1;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list-item {
+        margin-right: 16px;
+        padding-right: 16px;
+        border-right: 1px solid black;
+        &:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__logo-container {
+        display: flex;
+        margin-right: 16px;
+        font-family: "Lato-Bold";
+        z-index: 1;
+    }
+
+    &__logo {
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+    }
+}

@@ -25,7 +25,7 @@ ul {
 
 ul,
 ol {
-    list-style-position: inside;
+    list-style-type: none;
 }
 
 img {
@@ -36,14 +36,18 @@ img {
 button {
     border: none;
     cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 a {
-    color: black;
+    color: #000;
     text-decoration: none;
 
     &:hover {
-        color: black;
+        color: #000;
         text-decoration: none;
     }
 }

@@ -1,0 +1,11 @@
+﻿.input {
+    font-family: "Lato-Regular";
+    color: #000;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #000;
+
+    &:placeholder {
+        font-family: "Lato-Light";
+    }
+}

@@ -4,36 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Flashcards.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/style/reset.css" />
-    <link rel="stylesheet" href="~/style/home.css" />
-    <link rel="stylesheet" href="~/style/card.css" />
-    <link rel="stylesheet" href="~/style/layout.css" />
+    <link rel="stylesheet" href="~/styles/global/reset.css" />
+    <link rel="stylesheet" href="~/styles/global/layout.css" />
+    <link rel="stylesheet" href="~/styles/global/helpers.css" />
+    <link rel="stylesheet" href="~/styles/global/fonts.css" />
+    <link rel="stylesheet" href="~/styles/global/buttons.css" />
+    <link rel="stylesheet" href="~/styles/global/icons.css" />
+    <link rel="stylesheet" href="~/styles/global/inputs.css" />
+    <link rel="stylesheet" href="~/styles/pages/home.css" />
+    <link rel="stylesheet" href="~/styles/pages/flashcards-page.css" />
+    <link rel="stylesheet" href="~/styles/pages/form-page.css" />
+    <link rel="stylesheet" href="~/styles/components/header.css" />
+    <link rel="stylesheet" href="~/styles/components/category-card.css" />
+    <link rel="stylesheet" href="~/styles/components/flashcard.css" />
+    <link rel="stylesheet" href="~/styles/components/form.css" />
+
 </head>
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Flashcards" asp-action="Index">Flashcards</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <a class="header__logo-container" asp-area="" asp-controller="Flashcards" asp-action="Index">
+            <img src="~/assets/images/logo.svg" alt="flashcards logo" class="header__logo" />
+            Flashcards
+        </a>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+                <li class="header__list-item">
+                    <a class="">About</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <main role="main" class="main">
         @RenderBody()
     </main>
-    <footer class="footer box">
-        &copy; 2021 Karolina Jaklik &amp; Anna Mika. All rights reserved - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer">
+        &copy; 2021 Karolina Jaklik &amp; Anna Mika. All rights reserved.
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
