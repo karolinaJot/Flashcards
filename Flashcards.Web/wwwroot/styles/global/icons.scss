@@ -1,0 +1,19 @@
+﻿.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    &--xs {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--sm {
+        width: 24px;
+        height: 24px;
+    }
+
+    &--arrow-left {
+        background-image: url("../../assets/images/arrow-left.svg")
+    }
+}

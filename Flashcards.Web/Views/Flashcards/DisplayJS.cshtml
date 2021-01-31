@@ -1,8 +1,8 @@
 ﻿@model List<JSFlashcardsModel>
 
-<section class="flashcards-view h-box">
-    <div class="flashcards-view__container">
-        <button id="btn-switch" class="flashcards-view__switch-button">Switch View</button>
+<section class="flashcards-page h-box">
+    <div class="flashcards-page__container">
+        <button id="btn-switch" class="flashcards-page__switch-button">Switch View</button>
 
         @{
             int flashcardsNumber = Model.Count();
@@ -32,7 +32,7 @@
 
         @*TODO: checkbox Learnt*@
 
-        <nav id="nav" class="flashcards-view__navigation">
+        <nav id="nav" class="flashcards-page__navigation">
             <button id="prev">Previous</button>
             <button id="next">Next</button>
         </nav>
