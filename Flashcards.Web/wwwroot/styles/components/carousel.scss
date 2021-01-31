@@ -1,1 +1,31 @@
-﻿
+﻿.carousel {
+    position: relative;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: 600px) {
+        margin-bottom: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: stretch;
+        flex: auto;
+        align-items: center;
+        overflow: auto;
+        padding: 16px;
+    }
+
+    &__next-button {
+        position: absolute;
+        right: 0;
+        top: calc(50% - 28px);
+    }
+
+    &__prev-button {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 28px);
+    }
+}
