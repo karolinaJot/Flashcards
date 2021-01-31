@@ -9,3 +9,17 @@
         font-family: "Lato-Light";
     }
 }
+
+.textarea {
+    font-family: "Lato-Regular";
+    color: #000;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #000;
+    height: auto;
+    resize: none;
+
+    &:placeholder {
+        font-family: "Lato-Light";
+    }
+}
