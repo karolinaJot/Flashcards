@@ -2,26 +2,29 @@
 
 <section class="edit-page h-box">
     <div class="edit-page__container">
-        <form method="post" class="form">
-            <div class="form__content">
-                <h1 class="form__header heading-1">Edit Flashcard</h1>
-                <div class="form__group">
-                    <label asp-for="Title" class="form__label">Title :</label>
-                    <input asp-for="Title" type="text" name="title" placeholder="Flashcard title" class="form__input input" />
-                </div>
-                <div class="form__group">
-                    <label asp-for="Description" class="form__label">Description :</label>
-                    <input asp-for="Description" type="text" name="description" placeholder="Flashcard description" class="form__input input" />
-                </div>
-                <div class="form__group form__buttons-container">
-                    <button type="submit" class="button button--primary h-margin-bottom-16">Update</button>
-                    <a asp-controller="Flashcards" asp-action="Index" class="button button--secondary">
-                        <i class="icon icon--xs icon--arrow-left h-margin-right-8"> </i>
-                        <span>Back Home</span>
-                    </a>
-                </div>
-            </div>
-        </form>
+		<form method="post" class="form">
+			<div asp-validation-summary="ModelOnly"></div>
+			<div class="form__content">
+				<h1 class="form__header heading-1">Edit Flashcard</h1>
+				<div class="form__group">
+					<label asp-for="Title" class="form__label">Title :</label>
+					<input asp-for="Title" type="text" name="title" placeholder="Flashcard title" class="form__input input" />
+					<span asp-validation-for="Title"></span>
+				</div>
+				<div class="form__group">
+					<label asp-for="Description" class="form__label">Description :</label>
+					<input asp-for="Description" type="text" name="description" placeholder="Flashcard description" class="form__input input" />
+					<span asp-validation-for="Description"></span>
+				</div>
+				<div class="form__group form__buttons-container">
+					<button type="submit" class="button button--primary h-margin-bottom-16">Update</button>
+					<a asp-controller="Flashcards" asp-action="Index" class="button button--secondary">
+						<i class="icon icon--xs icon--arrow-left h-margin-right-8"> </i>
+						<span>Back Home</span>
+					</a>
+				</div>
+			</div>
+		</form>
     </div>
 </section>
 
