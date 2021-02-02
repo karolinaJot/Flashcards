@@ -1,11 +1,18 @@
 ﻿@model List<JSFlashcardsModel>
 
-<div style="display: none" id="flashcardsList">
-    <ul>
+<div style="display: none" id="flashcardsListContainer">
+    <ul id="flashcardsList">
         @{
 			foreach (var item in Model)
 			{
-                <li><span>@item.Title </span> <span>@item.Description </span> <span>@item.Id</span></li>
+                <li>
+                    <ul>
+                        <li>@item.Title</li>
+                        <li>@item.Description</li>
+                        <li>@item.Id</li>
+                        
+                    </ul> 
+                </li>
             }
 		}
     </ul>
@@ -60,9 +67,6 @@
            
 
             @*TODO: checkbox Learnt*@
-
-            @*<nav id="nav"> </nav>*@
-
 
 
             <div id="btn-container" class="flashcards-page__buttons-container">
