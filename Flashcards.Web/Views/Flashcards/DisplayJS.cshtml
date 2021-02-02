@@ -1,5 +1,16 @@
 ﻿@model List<JSFlashcardsModel>
 
+<div style="display: none" id="flashcardsList">
+    <ul>
+        @{
+			foreach (var item in Model)
+			{
+                <li><span>@item.Title </span> <span>@item.Description </span> <span>@item.Id</span></li>
+            }
+		}
+    </ul>
+</div>
+
 <section class="flashcards-page h-box">
     <div class="flashcards-page__container">
 
@@ -72,3 +83,6 @@
         </div>
     </div>
 </section>
+@section Scripts {
+    <script src="~/js/flashcardsCarousel.js"></script>
+}
