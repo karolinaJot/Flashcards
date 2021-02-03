@@ -1,6 +1,8 @@
 ﻿@model List<JSFlashcardsModel>
 
-<div style="display: none" id="flashcardsListContainer">
+<div id="displayContent"></div>
+
+@*<div style="display: none" id="flashcardsListContainer">
     <ul id="flashcardsList">
         @{
 			foreach (var item in Model)
@@ -16,7 +18,7 @@
             }
 		}
     </ul>
-</div>
+</div>*@
 
 <section class="flashcards-page h-box">
     <div class="flashcards-page__container">
@@ -29,35 +31,35 @@
         </div>
 
         <div class="flashcards-page__main">
-            @{
+            @*@{
                 int flashcardsNumber = Model.Count();
                 int id = 0;
-            }
+            }*@
             <div class="carousel">
                 <button id="prev" class="carousel__prev-button">
                     <i class="icon icon--md icon--prev"> </i>
                 </button>
                 <div class="carousel__container">
        
-                        @if (flashcardsNumber > 0)
+                        @*@if (flashcardsNumber > 0)
                         {
                             Random random = new Random();
                             int index = random.Next(flashcardsNumber);
-                            id = Model[index].Id;
+                            id = Model[index].Id;*@
 
                             <div id="flashcard-container" class="flashcard h-js">
                                 <div id="flashcard-title" class="flashcard__side">
-                                    <h2 class="flashcard__title"> @Model[index].Title </h2>
+                                    <h2 class="flashcard__title"> tytuł fiszki @*@Model[index].Title*@ </h2>
                                 </div>
                                 <div id="flashcard-description" class="flashcard__side">
-                                    <h2 class="flashcard__description"> @Model[index].Description </h2>
+                                    <h2 class="flashcard__description"> wspaniały opis fiszki @*@Model[index].Description*@ </h2>
                                 </div>
                             </div>
-                        }
+                        @*}
                         else
                         {
                             <p>Sorry, there is no flashcards available.</p>
-                        }
+                        }*@
      
                 </div>
                 <button id="next" class="carousel__next-button">
@@ -74,11 +76,11 @@
                     <i class="icon icon--xs icon--add h-margin-right-8"> </i>
                     Create
                 </a>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
+                <a asp-route-id=@*"@id"*@ asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
                     <i class="icon icon--xs icon--edit h-margin-right-8"> </i>
                     Edit
                 </a>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
+                <a asp-route-id=@*"@id"*@ asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
                     <i class="icon icon--xs icon--delete h-margin-right-8"> </i>
                     Delete
                 </a>
