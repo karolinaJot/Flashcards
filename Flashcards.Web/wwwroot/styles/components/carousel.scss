@@ -1,7 +1,7 @@
 ﻿.carousel {
     position: relative;
     margin-bottom: 24px;
-
+    height: 100%;
     @media screen and (max-width: 600px) {
         margin-bottom: 0;
     }
@@ -14,7 +14,8 @@
         flex: auto;
         align-items: center;
         overflow: auto;
-        padding: 16px;
+        padding: 0 16px;
+        height: 100%;
     }
 
     &__next-button {
