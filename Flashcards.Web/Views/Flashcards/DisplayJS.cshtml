@@ -4,7 +4,7 @@
     <div class="flashcards-page__container">
 
         <div class="flashcards-page__switch-view-container">
-            <button id="btn-switch" class="button button--secondary">
+            <button id="btn-switch" class="button button--secondary flashcard-page__switch-button">
                 <i class="icon icon--xs icon--switch h-margin-right-8"> </i>
                 Switch View
             </button>
@@ -27,12 +27,14 @@
                             int index = random.Next(flashcardsNumber);
                             id = Model[index].Id;
 
-                            <div id="flashcard-container" class="flashcard h-js">
-                                <div id="flashcard-title" class="flashcard__side">
-                                    <h2 class="flashcard__title"> @Model[index].Title </h2>
-                                </div>
-                                <div id="flashcard-description" class="flashcard__side">
-                                    <h2 class="flashcard__description"> @Model[index].Description </h2>
+                            <div id="flashcard-container" class="flashcard flashcard--front">
+                                <div class="flashcard__inner">
+                                    <div id="flashcard-title" class="flashcard__face flashcard__face--front h-js">
+                                        <h2 class="flashcard__title"> @Model[index].Title </h2>
+                                    </div>
+                                    <div id="flashcard-description" class="flashcard__face flashcard__face--back h-js">
+                                        <h2 class="flashcard__description"> @Model[index].Description </h2>
+                                    </div>
                                 </div>
                             </div>
                         }

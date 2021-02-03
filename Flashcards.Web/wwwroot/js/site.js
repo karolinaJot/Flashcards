@@ -1,4 +1,41 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener("DOMContentLoaded", function () {
 
-// Write your JavaScript code.
+    // switch views
+    const switchButton = document.querySelector(".flashcard-page__switch-button");
+    const flashcard = document.querySelector(".flashcard__inner");
+
+    switchButton.addEventListener('click', event => {
+        const flashcard = document.querySelector(".flashcard__inner");
+        flashcard.classList.toggle("is-flipped");
+    });
+    flashcard.addEventListener('click', event => {
+        const flashcard = document.querySelector(".flashcard__inner");
+        flashcard.classList.toggle("is-flipped");
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
