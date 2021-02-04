@@ -20,35 +20,35 @@
                     <i class="icon icon--md icon--prev"> </i>
                 </button>
                 <div class="carousel__container">
-       
-                        @if (flashcardsNumber > 0)
-                        {
-                            Random random = new Random();
-                            int index = random.Next(flashcardsNumber);
-                            id = Model[index].Id;
 
-                            <div id="flashcard-container" class="flashcard flashcard--front">
-                                <div class="flashcard__inner">
-                                    <div id="flashcard-title" class="flashcard__face flashcard__face--front h-js">
-                                        <h2 class="flashcard__title"> @Model[index].Title </h2>
-                                    </div>
-                                    <div id="flashcard-description" class="flashcard__face flashcard__face--back h-js">
-                                        <h2 class="flashcard__description"> @Model[index].Description </h2>
-                                    </div>
+                    @if (flashcardsNumber > 0)
+                    {
+                        Random random = new Random();
+                        int index = random.Next(flashcardsNumber);
+                        id = Model[index].Id;
+
+                        <div id="flashcard-container" class="flashcard flashcard--front">
+                            <div class="flashcard__inner">
+                                <div id="flashcard-title" class="flashcard__face flashcard__face--front h-js">
+                                    <h2 class="flashcard__title"> @Model[index].Title </h2>
+                                </div>
+                                <div id="flashcard-description" class="flashcard__face flashcard__face--back h-js">
+                                    <h2 class="flashcard__description"> @Model[index].Description </h2>
                                 </div>
                             </div>
-                        }
-                        else
-                        {
-                            <p>Sorry, there is no flashcards available.</p>
-                        }
-     
+                        </div>
+                    }
+                    else
+                    {
+                        <p>Sorry, there is no flashcards available.</p>
+                    }
+
                 </div>
                 <button id="next" class="carousel__next-button">
                     <i class="icon icon--md icon--next"> </i>
                 </button>
             </div>
-           
+
 
             @*TODO: checkbox Learnt*@
 
@@ -74,3 +74,19 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <script>
+        const switchButton = document.querySelector(".flashcard-page__switch-button");
+        const flashcard = document.querySelector(".flashcard__inner");
+
+        switchButton.addEventListener('click', event => {
+            const flashcard = document.querySelector(".flashcard__inner");
+            flashcard.classList.toggle("is-flipped");
+        });
+        flashcard.addEventListener('click', event => {
+            const flashcard = document.querySelector(".flashcard__inner");
+            flashcard.classList.toggle("is-flipped");
+        });
+    </script>
+}
