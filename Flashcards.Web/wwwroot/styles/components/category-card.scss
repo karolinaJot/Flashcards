@@ -1,12 +1,13 @@
 ﻿.category-card {
     padding: 24px;
-    flex: 0 0 33.333%;
+    width: 500px;
+    height: 500px;
+    display: flex;
 
     @media screen and (max-width: 600px) {
         padding: 16px;
         flex: 0 0 100%;
     }
-
 
     &--disabled {
         opacity: 0.3;
@@ -36,8 +37,9 @@
         min-height: 445px;
         position: relative;
         border-radius: 24px;
-        flex: 0 0 50%;
+        flex: auto;
         overflow: hidden;
+        background-color: #3040C4;
 
         @media screen and (max-width: 600px) {
             min-height: 256px;

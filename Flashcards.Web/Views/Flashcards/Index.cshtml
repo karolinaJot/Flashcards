@@ -4,27 +4,19 @@
 
 <section class="home-page">
 
-    <div class="home-page__header">
-        <div class="home-page__header-container h-box">
+    <div class="home-page__welcome">
+        <div class="home-page__header h-box">
             <p class="home-page__header-paragraph">
-                Hi!
-                <br />
-                What skill you develope today?
-                <br />
-                Pick up! But remeber,
-                <br />
-                You can choose any issue from below that you want, so long as it is JS.
+                Learn at your own pace what you want to learn.
             </p>
+        </div>
+        <div class="home-page__container h-box">
+            <a asp-controller="Flashcards" asp-action="DisplayJS" alt="card" class="category-card">
+                <div class="category-card__container category-card--enabled">
+                    <div class="category-card__logo"></div>
+                </div>
+            </a>
         </div>
     </div>
 
-    <div class="home-page__container h-box">
-
-        <a asp-controller="Flashcards" asp-action="DisplayJS" alt="card" class="category-card">
-            <div class="category-card__container category-card--enabled h-js">
-                <div class="category-card__logo"></div>
-            </div>
-        </a>
-
-    </div>
 </section>
