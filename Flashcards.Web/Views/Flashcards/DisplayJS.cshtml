@@ -1,5 +1,4 @@
-﻿@model List<JSFlashcardsModel>
-
+﻿
 <section class="flashcards-page h-box">
     <div class="flashcards-page__container">
 
@@ -11,38 +10,38 @@
         </div>
 
         <div class="flashcards-page__main">
-            @{
+            @*@{
                 int flashcardsNumber = Model.Count();
                 int id = 0;
-            }
+            }*@
             <div class="carousel">
                 <button id="prev" class="carousel__prev-button">
                     <i class="icon icon--md icon--prev"> </i>
                 </button>
                 <div class="carousel__container">
+       
+                        @*@if (flashcardsNumber > 0)
+                        {
+                            Random random = new Random();
+                            int index = random.Next(flashcardsNumber);
+                            id = Model[index].Id;*@
 
-                    @if (flashcardsNumber > 0)
-                    {
-                        Random random = new Random();
-                        int index = random.Next(flashcardsNumber);
-                        id = Model[index].Id;
-
-                        <div id="flashcard-container" class="flashcard flashcard--front">
-                            <div class="flashcard__inner">
-                                <div id="flashcard-title" class="flashcard__face flashcard__face--front h-js">
-                                    <h2 class="flashcard__title"> @Model[index].Title </h2>
-                                </div>
-                                <div id="flashcard-description" class="flashcard__face flashcard__face--back h-js">
-                                    <h2 class="flashcard__description"> @Model[index].Description </h2>
+                            <div id="flashcard-container" class="flashcard flashcard--front">
+                                <div class="flashcard__inner">
+                                    <div id="flashcard-title" class="flashcard__face flashcard__face--front h-js">
+                                        <h2 class="flashcard__title"> @*@Model[index].Title*@ </h2>
+                                    </div>
+                                    <div id="flashcard-description" class="flashcard__face flashcard__face--back h-js">
+                                        <h2 class="flashcard__description"> @*@Model[index].Description*@ </h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    }
-                    else
-                    {
-                        <p>Sorry, there is no flashcards available.</p>
-                    }
-
+                        @*}
+                        else
+                        {
+                            <p>Sorry, there is no flashcards available.</p>
+                        }*@
+     
                 </div>
                 <button id="next" class="carousel__next-button">
                     <i class="icon icon--md icon--next"> </i>
@@ -52,20 +51,17 @@
 
             @*TODO: checkbox Learnt*@
 
-            @*<nav id="nav"> </nav>*@
-
-
 
             <div id="btn-container" class="flashcards-page__buttons-container">
                 <a asp-controller="Flashcards" asp-action="ShowForm" class="button button--secondary flashcards-page__button">
                     <i class="icon icon--xs icon--add h-margin-right-8"> </i>
                     Create
                 </a>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
+                <a asp-route-id=@*"@id"*@ asp-controller="Flashcards" asp-action="Edit" class="button button--secondary flashcards-page__button">
                     <i class="icon icon--xs icon--edit h-margin-right-8"> </i>
                     Edit
                 </a>
-                <a asp-route-id="@id" asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
+                <a asp-route-id=@*"@id"*@ asp-controller="Flashcards" asp-action="Delete" class="button button--secondary flashcards-page__button">
                     <i class="icon icon--xs icon--delete h-margin-right-8"> </i>
                     Delete
                 </a>
@@ -76,6 +72,7 @@
 </section>
 
 @section Scripts {
+    <script src="~/js/flashcardsCarousel.js"></script>
     <script>
         const switchButton = document.querySelector(".flashcard-page__switch-button");
         const flashcard = document.querySelector(".flashcard__inner");
@@ -90,3 +87,4 @@
         });
     </script>
 }
+

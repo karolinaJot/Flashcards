@@ -47,23 +47,29 @@ namespace Flashcards.Web.Controllers
 			}
 			return View(jsFlashcard);
 		}
-		
+
+		//[HttpGet]
+		//public IActionResult DisplayJS()
+		//{
+		//	var flashcardsList = _dbContext.FlashcardsJS.ToList();
+		//	List<JSFlashcardsModel> flashcardsFromDB = new List<JSFlashcardsModel>();
+		//	foreach (var flashcard in flashcardsList)
+		//	{
+		//		var temp = new JSFlashcardsModel
+		//		{
+		//			Title = flashcard.Title,
+		//			Description = flashcard.Description,
+		//			Id = flashcard.Id
+		//		};
+		//		flashcardsFromDB.Add(temp);
+		//	}
+		//	return View(flashcardsFromDB);
+		//}
+
 		[HttpGet]
 		public IActionResult DisplayJS()
 		{
-			var flashcardsList = _dbContext.FlashcardsJS.ToList();
-			List<JSFlashcardsModel> flashcardsFromDB = new List<JSFlashcardsModel>();
-			foreach (var flashcard in flashcardsList)
-			{
-				var temp = new JSFlashcardsModel
-				{
-					Title = flashcard.Title,
-					Description = flashcard.Description,
-					Id = flashcard.Id
-				};
-				flashcardsFromDB.Add(temp);
-			}
-			return View(flashcardsFromDB);
+			return View();
 		}
 
 		[HttpGet]
