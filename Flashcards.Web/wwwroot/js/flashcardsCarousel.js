@@ -29,8 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
 			return index;
 		});
 
+		console.log(index);
+
 		prevBtn.addEventListener("click", event => {
-			console.log("hej from prev")
+			console.log("hej from prev");
 			index--;
 			titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
 			descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
