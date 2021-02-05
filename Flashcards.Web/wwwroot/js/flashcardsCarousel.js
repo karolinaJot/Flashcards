@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		console.log(flashcardsObjArray);
 		
 		const prevBtn = document.getElementById("prev");
+		console.log(prevBtn);
 		const nextBtn = document.getElementById("next");
 		const titleContainer = document.querySelector("#flashcard-title h2");
 		const descriptionContainer = document.querySelector("#flashcard-description h2");
@@ -21,14 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
 		descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
 
-		nextBtn.addEventListener("click", function (event) {
+		nextBtn.addEventListener("click", event => {
 			index++;
-			console.log(flashcardsObjArray[index].title)
-			let titleValue = flashcardsObjArray[index].title;
-			//const title = document.querySelector("#flashcard-title h2");
-			//const description = document.querySelector("#flashcard-description h2");
+			titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
+			descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
+			return index;
+		});
 
-			titleContainer.innerHTML = `${titleValue}`;
+		prevBtn.addEventListener("click", event => {
+			console.log("hej from prev")
+			index--;
+			titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
 			descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
 			return index;
 		});
