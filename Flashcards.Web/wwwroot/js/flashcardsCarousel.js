@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		const flashcardsData =await response.json();
 		const flashcardsObjArray = flashcardsData.data;
 
+		const btnsContainer = document.getElementById('btn-container');
+
 		if (flashcardsObjArray.length > 0) {
 
 			const prevBtn = document.getElementById("prev");
@@ -44,13 +46,34 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 
 			// obsługa buttonów CREATE, EDIT, DELETE
-
-
+			
+			btnsContainer.innerHTML = `
+				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
+					<i class="icon icon--xs icon--add h-margin-right-8"></i>
+					Create
+				</a>	
+				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Edit/${flashcardsObjArray[index].id}">
+					<i class="icon icon--xs icon--edit h-margin-right-8"></i>
+					Edit
+				</a>
+				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Delete/${flashcardsObjArray[index].id}">
+					<i class="icon icon--xs icon--delete h-margin-right-8"></i>
+					Delete
+				</a>
+				`;
 
 		} else {
 
 			alert("Sorry, there is no flashcards in here! Hit the Create button below!");
+			//jeśli w bazie nie ma fiszek to wyświetla się wyłącznie button CREATE
+			btnsContainer.innerHTML = `
+				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
+					<i class="icon icon--xs icon--add h-margin-right-8"></i>
+					Create
+				</a>	
+			`;
 		}
+
 
 	};
 
