@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (flashcardsObjArray.length > 0) {
 
 			const prevBtn = document.getElementById("prev");
-			console.log(prevBtn);
 			const nextBtn = document.getElementById("next");
 			const titleContainer = document.querySelector("#flashcard-title h2");
 			const descriptionContainer = document.querySelector("#flashcard-description h2");
@@ -25,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			nextBtn.addEventListener("click", event => {
 				index++;
+				if (index > flashcardsObjArray.length - 1) {
+					index = 0;
+				}
 				titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
 				descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
 				return index;
@@ -32,13 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			prevBtn.addEventListener("click", event => {
 				index--;
-				if (index > 0) {
-					titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
-					descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
-					return index;
-				} else {
-					alert("There is no previous flashcards. Create more flashcards or see the next one");
+				if (index < 0) {
+					index = flashcardsObjArray.length - 1;
 				}
+				titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
+				descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
+				return index;
 			});
 
 		} else {
