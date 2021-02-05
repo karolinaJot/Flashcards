@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			const nextBtn = document.getElementById("next");
 			const titleContainer = document.querySelector("#flashcard-title h2");
 			const descriptionContainer = document.querySelector("#flashcard-description h2");
+			// wyświetlanie treści fiszki, obsługa karuzeli
 			let index = 0;
 
 			titleContainer.innerHTML = `${flashcardsObjArray[index].title}`;
@@ -41,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				descriptionContainer.innerHTML = `${flashcardsObjArray[index].description}`;
 				return index;
 			});
+
+			// obsługa buttonów CREATE, EDIT, DELETE
+
+
 
 		} else {
 
