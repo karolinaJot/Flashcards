@@ -47,7 +47,7 @@
                     <i class="icon icon--md icon--next"> </i>
                 </button>
             </div>
-           
+
 
             @*TODO: checkbox Learnt*@
 
@@ -70,6 +70,21 @@
         </div>
     </div>
 </section>
+
 @section Scripts {
     <script src="~/js/flashcardsCarousel.js"></script>
+    <script>
+        const switchButton = document.querySelector(".flashcard-page__switch-button");
+        const flashcard = document.querySelector(".flashcard__inner");
+
+        switchButton.addEventListener('click', event => {
+            const flashcard = document.querySelector(".flashcard__inner");
+            flashcard.classList.toggle("is-flipped");
+        });
+        flashcard.addEventListener('click', event => {
+            const flashcard = document.querySelector(".flashcard__inner");
+            flashcard.classList.toggle("is-flipped");
+        });
+    </script>
 }
+
