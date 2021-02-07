@@ -1,12 +1,16 @@
 ﻿.category-card {
     padding: 24px;
-    flex: 0 0 33.333%;
+    display: flex;
 
     @media screen and (max-width: 600px) {
         padding: 16px;
         flex: 0 0 100%;
     }
 
+    @media screen and (min-width: 768px) {
+        width: 500px;
+        height: 500px;
+    }
 
     &--disabled {
         opacity: 0.3;
@@ -36,8 +40,9 @@
         min-height: 445px;
         position: relative;
         border-radius: 24px;
-        flex: 0 0 33.333333%;
+        flex: auto;
         overflow: hidden;
+        background-color: #3040C4;
 
         @media screen and (max-width: 600px) {
             min-height: 256px;
@@ -54,42 +59,6 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-
-        &--js {
-            background-image: url("../../assets/images/javascript.svg");
-        }
-
-        &--css {
-            background-image: url("../../assets/images/css.svg");
-        }
-
-        &--html {
-            background-image: url("../../assets/images/html.svg");
-        }
-
-        &--angular {
-            background-image: url("../../assets/images/angular.svg");
-        }
-
-        &--react {
-            background-image: url("../../assets/images/react.svg");
-        }
-
-        &--vue {
-            background-image: url("../../assets/images/vue.svg");
-        }
-    }
-
-    &__description {
-        font-family: "Lato-Regular";
-        font-size: 18px;
-        flex: auto;
-        background-color: white;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex: 1;
+        background-image: url("../../assets/images/plus-square-regular.svg");
     }
 }

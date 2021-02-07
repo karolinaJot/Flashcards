@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		const prevBtn = document.getElementById("prev");
 		const nextBtn = document.getElementById("next");
 		const titleContainer = document.querySelector("#flashcard-title h2");
-		const descriptionContainer = document.querySelector("#flashcard-description h2");
+		const descriptionContainer = document.querySelector("#flashcard-description p");
 
 		//Sprawdzam czy w bazie są fiszki
 		if (flashcardsObjArray.length > 0) {
@@ -72,24 +72,24 @@ document.addEventListener("DOMContentLoaded", function () {
 		function displayAllButtons(htmlDivEl ,data, i) {
 			htmlDivEl.innerHTML = `
 				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
-					<i class="icon icon--xs icon--add h-margin-right-8"></i>
-					Create
+					<i class="icon icon--xs icon--add flashcards-page__button-icon"></i>
+					<span class="flashcards-page__button-text">Create</span>
 				</a>	
 				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Edit/${flashcardsObjArray[i].id}">
-					<i class="icon icon--xs icon--edit h-margin-right-8"></i>
-					Edit
+					<i class="icon icon--xs icon--edit flashcards-page__button-icon"></i>
+					<span class="flashcards-page__button-text">Edit</span>
 				</a>
 				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Delete/${flashcardsObjArray[i].id}">
-					<i class="icon icon--xs icon--delete h-margin-right-8"></i>
-					Delete
+					<i class="icon icon--xs icon--delete flashcards-page__button-icon"></i>
+					<span class="flashcards-page__button-text">Delete</span>
 				</a>
 				`;
 		}
 		function displayCreateButton(htmlDivEl) {
 			htmlDivEl.innerHTML = `
 				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
-					<i class="icon icon--xs icon--add h-margin-right-8"></i>
-					Create
+					<i class="icon icon--xs icon--add flashcards-page__button-icon"></i>
+					<span class="flashcards-page__button-text">Create</span>
 				</a>	
 			`;
 		}
