@@ -26,6 +26,10 @@
         background-image: url("../../assets/images/arrow-left.svg");
     }
 
+    &--arrow-right {
+        background-image: url("../../assets/images/arrow-right.svg");
+    }
+
     &--add {
         background-image: url("../../assets/images/add.svg");
     }
@@ -48,5 +52,9 @@
 
     &--prev {
         background-image: url("../../assets/images/prev.svg");
+    }
+
+    &--long-arrow-alt-right {
+        background-image: url("../../assets/images/long-arrow-alt-right-solid.svg");
     }
 }

@@ -34,10 +34,12 @@
         <nav class="header__navigation">
             <ul class="header__list">
                 <li class="header__list-item">
-                    <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">List</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="">About</a>
+                    <a asp-controller="Flashcards" asp-action="DisplayJS" alt="" class="button button--secondary h-margin-left-8">
+                        create
+                    </a>
                 </li>
             </ul>
         </nav>

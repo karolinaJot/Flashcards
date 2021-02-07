@@ -4,17 +4,17 @@
 
 <section class="home-page">
 
-    <div class="home-page__welcome">
+    <div class="home-page__welcome-container">
         <div class="home-page__header h-box">
+            <span class="home-page__welcome">Welcome to flashcards creator.</span>
             <p class="home-page__header-paragraph">
-                Learn at your own pace what you want to learn.
+                <span>A free service for creating web-based study flashcards that can be shared with others.</span>
             </p>
         </div>
-        <div class="home-page__container h-box">
-            <a asp-controller="Flashcards" asp-action="DisplayJS" alt="card" class="category-card">
-                <div class="category-card__container category-card--enabled">
-                    <div class="category-card__logo"></div>
-                </div>
+        <div class="home-page__container h-box h-margin-bottom-16">
+            <a asp-controller="Flashcards" asp-action="DisplayJS" alt="" class="button button--secondary button--solid home-page__create-button">
+                create flashcard
+                <i class="icon icon--xs icon--arrow-right h-margin-left-8"></i>
             </a>
         </div>
     </div>
