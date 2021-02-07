@@ -2,6 +2,8 @@
     position: relative;
     margin-bottom: 24px;
     height: 100%;
+    width: 100%;
+
     @media screen and (max-width: 600px) {
         margin-bottom: 0;
     }
@@ -9,25 +11,32 @@
     &__container {
         display: flex;
         justify-content: center;
-        align-items: center;
         align-items: stretch;
         flex: auto;
         align-items: center;
         overflow: auto;
-        padding: 0 16px;
         height: 100%;
+
+        @media screen and (min-width: 601px) {
+            padding: 0 52px;
+        }
     }
 
     &__next-button {
         position: absolute;
         right: 0;
-        top: calc(50% - 28px);
+        top: 0;
+        height: 100%;
+        width: 52px;
+        z-index: 1;
     }
 
     &__prev-button {
         position: absolute;
         left: 0;
-        top: calc(50% - 28px);
+        top: 0;
+        height: 100%;
+        width: 52px;
         z-index: 1;
     }
 }
