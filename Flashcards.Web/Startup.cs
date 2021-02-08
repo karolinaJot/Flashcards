@@ -38,6 +38,7 @@ namespace Flashcards.Web
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");
+				app.UseStatusCodePagesWithRedirects("/Home/{0}");
 			}
 			app.UseStaticFiles();
 
