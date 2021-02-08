@@ -55,7 +55,7 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult ShowList()
+		public IActionResult CollectionPage()
 		{
 			return View();
 		}
