@@ -33,5 +33,20 @@ namespace Flashcards.Web.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
+
+		[Route("Home/{statusCode}")]
+		public IActionResult HttpStatusCodeHandler(int statusCode)
+		{
+			switch (statusCode)
+			{
+				case 404:
+					ViewBag.ErrorMessage = "Sorry, there is something wrong with your path";
+					break;
+			}
+			
+			return View("Error");
+		}
+
+
 	}
 }
