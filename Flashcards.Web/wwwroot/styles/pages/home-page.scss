@@ -1,6 +1,6 @@
 ﻿.home-page {
     width: 100%;
-    margin: 40px;
+    margin: 64px 40px 40px 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -26,7 +26,7 @@
         }
 
         @media screen and (min-width: 601px) {
-            padding: 50px;
+            padding: 120px 50px;
         }
     }
 
