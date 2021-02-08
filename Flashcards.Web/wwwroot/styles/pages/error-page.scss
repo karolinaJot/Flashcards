@@ -1,0 +1,33 @@
+﻿.error-page {
+    background-image: url("../../assets/images/mountains.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    font-family: "Lato-Black";
+    color: #F7DF1E;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding: 16px;
+    position: absolute;
+    top: 83px;
+    bottom: 0;
+
+    @media screen and (min-width: 601px) {
+        padding: 182px 80px;
+        font-size: 58px;
+        justify-content: flex-start;
+    }
+
+    &__link {
+        color: #F7DF1E;
+
+        &:hover {
+            color: #F7DF1E;
+            text-decoration: underline;
+        }
+    }
+}
