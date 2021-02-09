@@ -21,27 +21,35 @@
     }
 }
 
+.h-hidden {
+    display: none !important;
+}
+
+.h-show-flex {
+    display: flex !important;
+}
+
 .h-js {
-    background-color: #F7DF1E;
+    background-color: #F7DF1E !important;
 }
 
 .h-margin-bottom-8 {
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
 }
 .h-margin-right-8 {
-    margin-right: 8px;
+    margin-right: 8px !important;
 }
 .h-margin-left-8 {
-    margin-left: 8px;
+    margin-left: 8px !important;
 }
 
 .h-margin-bottom-16 {
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
 }
 .h-margin-right-16 {
-    margin-right: 16px;
+    margin-right: 16px !important;
 }
 
 .h-margin-bottom-32 {
-    margin-bottom: 32px;
+    margin-bottom: 32px !important;
 }
