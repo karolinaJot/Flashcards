@@ -1,12 +1,27 @@
 ﻿
 <section class="collection-page h-box">
-    <table id="flashcardsList" class="collection-page__table">
+    <div class="collection-page__header">
+        <div class="collection-page__buttons-container">
+            <button class="collection-page__list-view-button button button--secondary button--solid h-margin-right-8">
+                <i class="icon icon--xs icon--list-view h-margin-right-8"></i>
+                List view
+            </button>
+            <button class="collection-page__cards-view-button button button--secondary">
+                <i class="icon icon--xs icon--cards-view h-margin-right-8"></i>
+                cards view
+            </button>
+        </div>
+    </div>
+    <table id="flashcardsList" class="collection-page__table collection-page__list-view">
         <tr class="collection-page__row">
             <th class="collection-page__header-cell">Flashcard title</th>
             <th class="collection-page__header-cell">Edit</th>
             <th class="collection-page__header-cell">Delete</th>
         </tr>
     </table>
+    <div class="collection-page__cards-view">
+        
+    </div>
 </section>
 
 
