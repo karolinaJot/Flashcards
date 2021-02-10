@@ -18,25 +18,46 @@ Flashcards is a small application for creating notes. It was build for collectin
 	
 		
 ## Screenshots from application:
- <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 
 Home Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_HomePage.png "Home Page")
 
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+ 
 Add New Flashcard:
+
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_AddNewFlashcard.png "Add New Flashcard")
+
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+ 
+Single Card View:
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard.png "Single card view")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard-animation.png "Single card view animation")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard-animation2.png "Single card view animation")
+
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
 
 Edit Flashcard:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_EditPage.png "Edit Flashcard")
 
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+ 
 Delete Flashcard:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_DeletePage.png "Delete Flashcard")
 
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+ 
 List View Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ListViewPage.png "List View Page")
 
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+ 
 Cards View Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_CardsViewPage.png "Cards View Page")
 
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
+
 Error Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ErrorPage.png "Error Page")
+
+<hr style="margin-top: 20px; margin-bottom: 20px;"/>
