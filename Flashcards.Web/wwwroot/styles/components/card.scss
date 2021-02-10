@@ -1,5 +1,6 @@
 ﻿.card {
     padding: 24px;
+    background: pink;
     margin: 16px;
     display: flex;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -8,14 +9,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 445px;
-    width: calc(33.333% - 48px);
-    max-width: calc(33.333% - 48px);
+    min-height: 260px;
+    max-height: 260px;
+    width: calc(20% - 32px);
+    max-width: calc(20% - 32px);
     position: relative;
     border-radius: 24px;
     flex: auto;
     overflow: hidden;
     background-color: #f2f2f2;
+    flex-direction: column;
 
     @media screen and (max-width: 600px) {
         width: calc(100% - 32px);
@@ -30,7 +33,7 @@
     }
 
     &__title {
-        font-size: 32px;
+        font-size: 22px;
         font-family: "Lato-Bold";
         display: flex;
         height: 100%;
@@ -40,9 +43,15 @@
         align-items: center;
         flex-wrap: wrap;
         word-break: break-all;
+        width: 100%;
+        height: 100%;
 
         @media screen and (max-width: 600px) {
             font-size: 26px;
         }
+    }
+
+    &__buttons-container {
+        display: flex;
     }
 }

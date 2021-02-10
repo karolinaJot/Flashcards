@@ -70,10 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
 				const singleCard = document.createElement("div");
 				singleCard.classList.add("card");
 				cardsView.appendChild(singleCard);
+
 				const singleCardTitle = document.createElement("p");
 				singleCardTitle.classList.add("card__title");
 				singleCard.appendChild(singleCardTitle);
 				singleCardTitle.innerHTML += flashcardsObjArray[i].title;
+
+				const singleCardTButtonsContainer = document.createElement("div");
+				singleCardTButtonsContainer.classList.add("card__buttons-container");
+				singleCardTButtonsContainer.innerHTML = 
+				`
+					<a class="button button--secondary button--small h-margin-right-8 h-margin-left-8" href="/Flashcards/Edit/${flashcardsObjArray[i].id}">
+						<i class="icon icon--xs icon--edit"></i>
+					</a>
+					<a class="button button--secondary button--small h-margin-right-8 h-margin-left-8" href="/Flashcards/Delete/${flashcardsObjArray[i].id}">
+						<i class="icon icon--xs icon--delete"></i>
+					</a>
+				`
+				singleCard.appendChild(singleCardTButtonsContainer);
 			}
 		} else {
 
