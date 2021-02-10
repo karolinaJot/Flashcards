@@ -31,4 +31,13 @@
             color: #F7DF1E;
         }
     }
+
+    &__picture-author {
+        font-size: 16px;
+        color: #F7DF1E;
+        position: absolute;
+        bottom: 16px;
+        left: 24px;
+        opacity: 0.6;
+    }
 }
