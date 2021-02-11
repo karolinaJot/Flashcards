@@ -40,45 +40,52 @@ This application allows User to create his own customise set of flashcards and t
 		
 ## Screenshots from application:
 
-Home Page:
+### Home Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_HomePage.png "Home Page")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_HomePage_mobile.png "Home Page")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
  
-Add New Flashcard:
-
+### Add New Flashcard:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_AddNewFlashcard.png "Add New Flashcard")
-
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_AddNewFlashcard_mobile.png "Add New Flashcard")
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
  
-Single Card View:
+### Single Card View:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard.png "Single card view")
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard-animation.png "Single card view animation")
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard-animation2.png "Single card view animation")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard_mobile.png "Single card view animation")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_SingleCard-animation_mobile.png "Single card view animation")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 
-Edit Flashcard:
+### Edit Flashcard:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_EditPage.png "Edit Flashcard")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_EditPage_mobile.png "Edit Flashcard")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
  
-Delete Flashcard:
+### Delete Flashcard:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_DeletePage.png "Delete Flashcard")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_DeletePage_mobile.png "Delete Flashcard")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
  
-List View Page:
+### List View Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ListViewPage.png "List View Page")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ListViewPage_mobile.png "List View Page")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
  
-Cards View Page:
+### Cards View Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_CardsViewPage.png "Cards View Page")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_CardsViewPage_mobile.png "Cards View Page")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
 
-Error Page:
+### Error Page:
 ![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ErrorPage.png "Error Page")
+![alt text](https://github.com/aniamika/Flashcards/blob/main/Flashcards.Web/readme/Flashcards_ErrorPage_mobile.png "Error Page")
 
 <hr style="margin-top: 20px; margin-bottom: 20px;"/>
