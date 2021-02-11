@@ -4,7 +4,7 @@ This project was carried out from our great desire to learn and passion for deve
 In this Flashcards application we used **ASP.NET Core 3.1 MVC** and **JavaScript ES6**.
 
 ## Overview
-This application allows User to create his own customise set of flashcards and to display it in order to memorise.  Depends on User needs, flashcards can be use to learn all different issues, like: languages, history, geography, literatura, programming, etc). 
+This application allows User to create his own customise set of flashcards and to display it in order to memorise. User can also edit and delete each flashcard. Depends on User needs, flashcards can be use to learn all different issues, like: languages, history, geography, literatura, programming, etc). 
 
 
 ## What was used in the project:
