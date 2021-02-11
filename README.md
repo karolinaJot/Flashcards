@@ -1,6 +1,7 @@
 # Flashcards
-Welcome in our web application for creating flashcards. This project was carried out from our great desire to pass one of the university subject at WSEI Kraków during our Computer Science studies. It is a team project, built by **Karolina Jaklik** (karolinaJot) and **Anna Mika** (aniamika). 
-We used here **ASP.NET Core 3.1 MVC** and **JavaScript ES6**.
+### Welcome in our web application for creating flashcards!
+This project was carried out from our great desire to learn and passion for developing programming skills. It is a team project, built by **Karolina Jaklik** (karolinaJot) and **Anna Mika** (aniamika). We are Computer Science students at WSEI Krakow in Poland.
+In this Flashcards application we used **ASP.NET Core 3.1 MVC** and **JavaScript ES6**.
 
 ## Overview
 This application allows User to create his own customise set of flashcards and to display it in order to memorise.  Depends on User needs, flashcards can be use to learn all different issues, like: languages, history, geography, literatura, programming, etc). 
@@ -13,27 +14,28 @@ This application allows User to create his own customise set of flashcards and t
 - BEM - Block Element Modifier - naming convention;
 - AJAX;
 - Dependency Injection;
-- Entity Framework;
+- Entity Framework.
 
 
 ##  The plans for the future:
-- Grouping flashcards into categories.
-- Add mode for examination.
-- Display progress charts.
-- Enable sharing flashcards.
+- Add authentication and authorizastion;
+- Grouping flashcards into categories;
+- Add mode for examination;
+- Display progress charts;
+- Enable sharing flashcards;
 - Improve mobile and tablets support.
 
 ## KAROLINA: What I learnt:
 - AJAX basics;
-- concept of DI; 
+- Concept of DI; 
 - Entity Framework basics;
 - ASP.NET Core MVC basics;
-- concept of API;
-- developed Git skills;
-- developed soft skills, e.g: 
+- Concept of API;
+- Developed Git skills;
+- Developed soft skills, e.g: 
   - cooperation,
   - communication, 
-  - conducting the whole project remote only, without any "real" meetings with my partner;
+  - conducting the whole project remote only, without any "real" meetings with my partner.
 	
 		
 ## Screenshots from application:
