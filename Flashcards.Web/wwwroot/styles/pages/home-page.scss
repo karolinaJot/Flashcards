@@ -7,6 +7,7 @@
 
     @media screen and (max-width: 600px) {
         margin: 24px;
+        align-items: center;
     }
 
     &__welcome-container {
@@ -37,7 +38,7 @@
         margin-bottom: 24px;
 
         @media screen and (max-width: 600px) {
-            font-size: 18px;
+            font-size: 30px;
             margin-bottom: 16px;
         }
     }
@@ -52,7 +53,7 @@
 
         @media screen and (max-width: 600px) {
             padding: 0;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
         }
     }
 
@@ -74,7 +75,7 @@
         flex: 3;
 
         @media screen and (max-width: 600px) {
-            padding: 0 8px;
+            padding: 0;
         }
     }
 
