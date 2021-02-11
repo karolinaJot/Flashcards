@@ -31,25 +31,25 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult ShowForm(JSFlashcardsModel jsFlashcard)
+		public IActionResult ShowForm(FlashcardsModel flashcardModel)
 		{
 			if (ModelState.IsValid)
 			{
-				var flashcardCreated = new FlashcardJsEntity
+				var flashcardCreated = new FlashcardEntity
 				{
-					Title = jsFlashcard.Title,
-					Description = jsFlashcard.Description
+					Title = flashcardModel.Title,
+					Description = flashcardModel.Description
 				};
 
 				_dbContext.FlashcardsJS.Add(flashcardCreated);
 				_dbContext.SaveChanges();
 				return RedirectToAction("CollectionPage");
 			}
-			return View(jsFlashcard);
+			return View(flashcardModel);
 		}
 
 		[HttpGet]
-		public IActionResult DisplayJS()
+		public IActionResult DisplayFlashcard()
 		{
 			return View();
 		}
@@ -63,8 +63,8 @@ namespace Flashcards.Web.Controllers
 		[HttpGet]
 		public async Task <IActionResult> Edit(int id)
 		{
-			FlashcardJsEntity dataFromDb = await _dbContext.FlashcardsJS.FindAsync(id);
-			var flashcardToEdit = new JSFlashcardsModel
+			FlashcardEntity dataFromDb = await _dbContext.FlashcardsJS.FindAsync(id);
+			var flashcardToEdit = new FlashcardsModel
 			{
 				Title = dataFromDb.Title,
 				Description = dataFromDb.Description,
@@ -74,12 +74,12 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Edit(JSFlashcardsModel flashcardEdited)
+		public IActionResult Edit(FlashcardsModel flashcardEdited)
 		{
 
 			if (ModelState.IsValid)
 			{
-				var data = new FlashcardJsEntity
+				var data = new FlashcardEntity
 				{
 					Title = flashcardEdited.Title,
 					Description = flashcardEdited.Description,
@@ -110,7 +110,7 @@ namespace Flashcards.Web.Controllers
 			{
 				return NotFound();
 			}
-			var flashcardToDelete = new JSFlashcardsModel
+			var flashcardToDelete = new FlashcardsModel
 			{
 				Title = dataToDelete.Title,
 				Description = dataToDelete.Description,

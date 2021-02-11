@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Flashcards.Web.Models
 {
-	public class JSFlashcardsModel
+	public class FlashcardsModel
 	{
 		public int Id { get; set; }
 
