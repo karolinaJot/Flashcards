@@ -19,23 +19,71 @@
 
     &__navigation {
         z-index: 1;
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+            display: none;
+            position: absolute;
+            top: 83px;
+            left: 0;
+            padding: 0 24px;
+            width: 100%;
+
+            &.is-open {
+                display: flex;
+                background-color: #F7DF1E;
+            }
+        }
     }
 
     &__list {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
     }
 
     &__list-item {
-        margin-right: 16px;
-        padding-right: 16px;
-        border-right: 1px solid black;
+        @media screen and (min-width: 601px) {
+            border-right: 1px solid black;
+            margin-right: 16px;
+            padding-right: 16px;
 
-        &:last-child {
-            border-right: none;
-            margin-right: 0;
-            padding-right: 0;
+            &:last-child {
+                border-right: none;
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            padding: 0 0 16px 0;
+            font-family: "Lato-Bold";
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__list-item-button {
+        margin-left: 8px;
+
+        @media screen and (max-width: 600px) {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            justify-content: flex-start;
+            margin-left: 0;
+
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
 
@@ -50,5 +98,14 @@
         height: 24px;
         width: 24px;
         margin-right: 8px;
+    }
+
+    &__hamburger-button {
+        display: none;
+
+        @media screen and (max-width: 600px) {
+            display: block;
+            margin-left: 16px;
+        }
     }
 }

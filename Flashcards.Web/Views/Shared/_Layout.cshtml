@@ -37,17 +37,20 @@
             <ul class="header__list">
                 <li class="header__list-item">
                     <a class="" asp-area="" asp-controller="Flashcards" asp-action="CollectionPage">Your Collections</a>
-                </li> 
+                </li>
                 <li class="header__list-item">
                     <a class="" asp-area="" asp-controller="Flashcards" asp-action="DisplayFlashcard">Training</a>
                 </li>
                 <li class="header__list-item">
-                    <a asp-controller="Flashcards" asp-action="ShowForm" alt="" class="button button--secondary h-margin-left-8">
+                    <a asp-controller="Flashcards" asp-action="ShowForm" alt="" class="button button--secondary header__list-item-button">
                         create
                     </a>
                 </li>
             </ul>
         </nav>
+        <button class="header__hamburger-button">
+            <i class="icon icon--hamburger icon--sm"> </i>
+        </button>
     </header>
     <main role="main" class="main">
         @RenderBody()
@@ -55,6 +58,7 @@
     <footer class="footer">
         &copy; 2021 Karolina Jaklik &amp; Anna Mika. All rights reserved.
     </footer>
+    <script src="~/js/header.js"></script>
     @RenderSection("Scripts", required: false)
-    </body>
+</body>
 </html>
