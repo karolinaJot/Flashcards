@@ -43,7 +43,7 @@ namespace Flashcards.Web.Controllers
 
 				_dbContext.FlashcardsJS.Add(flashcardCreated);
 				_dbContext.SaveChanges();
-				return RedirectToAction("DisplayJS");
+				return RedirectToAction("CollectionPage");
 			}
 			return View(jsFlashcard);
 		}
@@ -91,7 +91,7 @@ namespace Flashcards.Web.Controllers
 				dataFromDb.Description = data.Description;
 
 				_dbContext.SaveChanges();
-				return RedirectToAction("DisplayJS");
+				return RedirectToAction("CollectionPage");
 			}
 			return View(flashcardEdited);
 
@@ -125,7 +125,7 @@ namespace Flashcards.Web.Controllers
 			var data = _dbContext.FlashcardsJS.Find(id);
 			_dbContext.FlashcardsJS.Remove(data);
 			_dbContext.SaveChanges();
-			return RedirectToAction("DisplayJS");
+			return RedirectToAction("CollectionPage");
 		}
 
 		

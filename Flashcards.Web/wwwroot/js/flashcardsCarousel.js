@@ -26,12 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			displayFirstFlashcard(titleContainer, descriptionContainer, flashcardsObjArray, index);
 
 			navigateCarousel(nextBtn, prevBtn, titleContainer, descriptionContainer, flashcardsObjArray, index);
-
-			// wyświetlenie i obsługa buttonów CREATE, EDIT, DELETE
-			displayAllButtons(btnsContainer, flashcardsObjArray, index);
-
-			
-
+		
 		} else {
 
 			alert("Sorry, there is no flashcards in here! Hit the Create button below!");
@@ -69,22 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			return i;
 		}
 
-		function displayAllButtons(htmlDivEl ,data, i) {
-			htmlDivEl.innerHTML = `
-				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
-					<i class="icon icon--xs icon--add flashcards-page__button-icon"></i>
-					<span class="flashcards-page__button-text">Create</span>
-				</a>	
-				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Edit/${flashcardsObjArray[i].id}">
-					<i class="icon icon--xs icon--edit flashcards-page__button-icon"></i>
-					<span class="flashcards-page__button-text">Edit</span>
-				</a>
-				<a class="button button--secondary flashcards-page__button" href="/Flashcards/Delete/${flashcardsObjArray[i].id}">
-					<i class="icon icon--xs icon--delete flashcards-page__button-icon"></i>
-					<span class="flashcards-page__button-text">Delete</span>
-				</a>
-				`;
-		}
 		function displayCreateButton(htmlDivEl) {
 			htmlDivEl.innerHTML = `
 				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
