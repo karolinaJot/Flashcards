@@ -1,6 +1,5 @@
 ﻿.card {
     padding: 24px;
-    background: pink;
     margin: 16px;
     display: flex;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -33,7 +32,7 @@
     }
 
     &__title {
-        font-size: 22px;
+        font-size: 20px;
         font-family: "Lato-Bold";
         display: flex;
         height: 100%;
@@ -42,7 +41,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        word-break: break-all;
+        word-break: break-word;
+        text-align: center;
         width: 100%;
         height: 100%;
 
