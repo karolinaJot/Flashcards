@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Flashcards.Web.Entities
 {
-	public class FlashcardJsEntity
+	public class FlashcardEntity
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }

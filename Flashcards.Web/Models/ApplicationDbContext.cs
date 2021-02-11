@@ -18,6 +18,6 @@ namespace Flashcards.Web.Models
 
 		}
 
-		public DbSet<FlashcardJsEntity> FlashcardsJS { get; set; }
+		public DbSet<FlashcardEntity> FlashcardsJS { get; set; }
 	}
 }
