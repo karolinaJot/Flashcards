@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		const listViewButton = document.querySelector(".collection-page__list-view-button");
 		const cardsView = document.querySelector(".collection-page__cards-view");
 		const cardsViewButton = document.querySelector(".collection-page__cards-view-button");
-		console.log(listViewButton);
-		console.log(cardsViewButton);
 
 		listViewButton.addEventListener("click", function () {
 			this.classList.toggle("button--solid");
