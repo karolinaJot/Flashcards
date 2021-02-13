@@ -1,8 +1,10 @@
-﻿::-webkit-scrollbar {
+﻿@import "../global/colors.scss";
+
+::-webkit-scrollbar {
     border-radius: 6px;
     width: 7px;
     height: 7px;
-    background-color: #f0f1f3;
+    background-color: $light-gray;
 
     &-track {
         border-radius: 6px;
@@ -11,12 +13,12 @@
 
         &-piece {
             border-radius: 6px;
-            background-color: #f0f1f3;
+            background-color: $light-gray;
         }
     }
 
     &-thumb {
         border-radius: 6px;
-        background-color: #d5d5ce;
+        background-color: $dark-gray;
     }
 }

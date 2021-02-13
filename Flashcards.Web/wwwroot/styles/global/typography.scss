@@ -11,6 +11,6 @@ $text-6xl: 3.625rem; //58px
 $text-7xl: 4.375rem; //70px
 
 .heading-1 {
-    font-size: 32px;
+    font-size: $text-5xl;
     font-family: "Lato-Bold";
 }

@@ -1,10 +1,11 @@
 ﻿@import "./typography.scss";
+@import "../global/colors.scss";
 
 body {
     margin: 0;
     min-height: 100%;
     width: 100%;
-    background: white;
+    background: $primary-white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
@@ -16,8 +17,8 @@ body {
 
 * {
     &::selection {
-        background-color: black;
-        color: white;
+        background-color: $primary-black;
+        color: $primary-white;
     }
 }
 

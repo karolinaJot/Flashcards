@@ -1,4 +1,5 @@
 ﻿@import "../global/typography.scss";
+@import "../global/colors.scss";
 
 .button {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -18,19 +19,19 @@
     }
 
     &--primary {
-        color: #FFF;
-        background-color: #000;
+        color: $primary-white;
+        background-color: $primary-black;
     }
 
     &--secondary {
-        color: #000;
-        background-color: #FFF;
-        border: 1px solid #000;
+        color: $primary-black;
+        background-color: $primary-white;
+        border: 1px solid $primary-black;
     }
 
     &--solid {
-        color: #000;
-        background-color: #F7DF1E;
+        color: $primary-black;
+        background-color: $primary-yellow;
     }
 
     &--half {

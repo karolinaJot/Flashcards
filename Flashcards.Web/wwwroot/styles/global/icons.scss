@@ -1,4 +1,6 @@
-﻿.icon {
+﻿@import "../global/colors.scss";
+
+.icon {
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
@@ -19,7 +21,7 @@
     }
 
     &--white {
-        background-color: #FFF;
+        background-color: $primary-white;
     }
 
     &--arrow-left {
