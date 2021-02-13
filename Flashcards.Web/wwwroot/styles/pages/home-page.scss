@@ -1,4 +1,6 @@
-﻿.home-page {
+﻿@import "../global/typography.scss";
+
+.home-page {
     width: 100%;
     margin: 64px 40px 40px 40px;
     display: flex;
@@ -32,13 +34,13 @@
     }
 
     &__welcome {
-        font-size: 70px;
+        font-size: $text-7xl;
         line-height: 1.1;
         font-family: "Lato-Bold";
         margin-bottom: 24px;
 
         @media screen and (max-width: 600px) {
-            font-size: 30px;
+            font-size: $text-4xl;
             margin-bottom: 16px;
         }
     }
@@ -58,12 +60,12 @@
     }
 
     &__header-paragraph {
-        font-size: 30px;
+        font-size: $text-4xl;
         line-height: 1.2;
         font-family: "Lato-Bold";
 
         @media screen and (max-width: 600px) {
-            font-size: 18px;
+            font-size: $text-lg;
         }
     }
 

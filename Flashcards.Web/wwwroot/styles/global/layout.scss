@@ -1,4 +1,6 @@
-﻿body {
+﻿@import "./typography.scss";
+
+body {
     margin: 0;
     min-height: 100%;
     width: 100%;
@@ -8,6 +10,7 @@
     position: absolute;
     display: flex;
     flex-flow: column;
+    font-size: $text-base;
     font-family: "Lato-Regular", sans-serif;
 }
 
@@ -27,7 +30,7 @@
     justify-content: center;
     align-items: center;
     padding: 40px 24px 16px 24px;
-    font-size: 13px;
+    font-size: $text-xs;
     font-weight: 500;
 
     @media screen and (max-width: 600px) {

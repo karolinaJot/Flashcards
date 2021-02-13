@@ -1,4 +1,6 @@
-﻿.header {
+﻿@import "../global/typography.scss";
+
+.header {
     z-index: 1;
     position: sticky;
     top: 0;
@@ -7,14 +9,14 @@
     justify-content: space-between;
     padding: 24px 40px;
     min-height: 83px;
-    font-size: 20px;
+    font-size: $text-xl;
     font-weight: 500;
     flex-wrap: wrap;
     background-color: #F7DF1E;
 
     @media screen and (max-width: 600px) {
         padding: 24px;
-        font-size: 18px;
+        font-size: $text-lg;
     }
 
     &__navigation {
@@ -65,7 +67,7 @@
             width: 100%;
             padding: 0 0 16px 0;
             font-family: "Lato-Bold";
-            font-size: 14px;
+            font-size: $text-sm;
             text-transform: uppercase;
         }
     }

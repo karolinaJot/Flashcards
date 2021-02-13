@@ -1,4 +1,6 @@
-﻿.collection-page {
+﻿@import "../global/typography.scss";
+
+.collection-page {
 
     @media screen and (min-width: 601px) {
         margin-top: 32px;
@@ -59,10 +61,10 @@
         padding: 15px;
         text-transform: uppercase;
         font-family: "Lato-Black";
-        font-size: 16px;
+        font-size: $text-base;
 
         @media screen and (max-width: 600px) {
-            font-size: 14px;
+            font-size: $text-sm;
         }
 
         &:first-child {
@@ -79,10 +81,10 @@
 
         &--title {
             font-family: "Lato-Regular";
-            font-size: 18px;
+            font-size: $text-lg;
 
             @media screen and (max-width: 600px) {
-                font-size: 14px;
+                font-size: $text-sm;
             }
         }
     }

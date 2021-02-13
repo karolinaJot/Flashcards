@@ -1,4 +1,6 @@
-﻿.form {
+﻿@import "../global/typography.scss";
+
+.form {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     border-radius: 24px;
@@ -40,7 +42,7 @@
     }
 
     &__label {
-        font-size: 20px;
+        font-size: $text-xl;
         margin-bottom: 8px;
     }
 

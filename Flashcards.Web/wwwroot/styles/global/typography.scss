@@ -1,4 +1,16 @@
-﻿.heading-1 {
+﻿$text-xs: 0.813rem; //13px
+$text-sm: 0.875rem; //14px
+$text-base: 1rem; //16px
+$text-lg: 1.125rem; //18px
+$text-xl: 1.25rem; //20px
+$text-2xl: 1.5rem; //24px
+$text-3xl: 1.625rem; //26px
+$text-4xl: 1.875rem; //30px
+$text-5xl: 2rem; //32px
+$text-6xl: 3.625rem; //58px
+$text-7xl: 4.375rem; //70px
+
+.heading-1 {
     font-size: 32px;
     font-family: "Lato-Bold";
 }
