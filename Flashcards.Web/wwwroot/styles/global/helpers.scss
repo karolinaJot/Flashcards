@@ -1,4 +1,6 @@
-﻿.h-box {
+﻿@import "../global/colors.scss";
+
+.h-box {
     margin: 0 auto;
     width: 100%;
     margin-right: auto;
@@ -30,7 +32,7 @@
 }
 
 .h-js {
-    background-color: #F7DF1E !important;
+    background-color: $primary-yellow !important;
 }
 
 .h-margin-bottom-8 {

@@ -1,10 +1,13 @@
-﻿.input {
-    font-family: "Lato-Regular";
-    color: #000;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #000;
+﻿@import "./typography.scss";
+@import "../global/colors.scss";
 
+.input {
+    font-family: "Lato-Regular";
+    color: $primary-black;
+    padding: 8px;
+    font-size: $text-sm;
+    border: 1px solid $primary-black;
+    
     &:placeholder {
         font-family: "Lato-Light";
     }
@@ -14,8 +17,8 @@
     font-family: "Lato-Regular";
     color: #000;
     padding: 8px;
-    font-size: 14px;
-    border: 1px solid #000;
+    font-size: $text-sm;
+    border: 1px solid $primary-black;
     height: auto;
     resize: none;
 

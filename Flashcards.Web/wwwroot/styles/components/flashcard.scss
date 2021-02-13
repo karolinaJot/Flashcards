@@ -1,4 +1,7 @@
-﻿.flashcard {
+﻿@import "../global/typography.scss";
+@import "../global/media.scss";
+
+.flashcard {
     perspective: 3000px;
     display: flex;
     flex-direction: column;
@@ -81,7 +84,7 @@
     }
 
     &__title {
-        font-size: 32px;
+        font-size: $text-5xl;
         font-family: "Lato-Black";
         display: flex;
         height: 100%;
@@ -93,13 +96,13 @@
         word-break: break-word;
         text-align: center;
 
-        @media screen and (max-width: 600px) {
-            font-size: 26px;
+        @media screen and (max-width: $screen--xs-max) {
+            font-size: $text-3xl;
         }
     }
 
     &__description {
-        font-size: 32px;
+        font-size: $text-5xl;
         font-family: "Lato-Regular";
         display: flex;
         height: 100%;
@@ -110,8 +113,8 @@
         flex-wrap: wrap;
         word-break: break-all;
 
-        @media screen and (max-width: 600px) {
-            font-size: 20px;
+        @media screen and (max-width: $screen--xs-max) {
+            font-size: $text-xl;
         }
     }
 }

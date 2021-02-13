@@ -1,6 +1,10 @@
-﻿.collection-page {
+﻿@import "../global/typography.scss";
+@import "../global/colors.scss";
+@import "../global/media.scss";
 
-    @media screen and (min-width: 601px) {
+.collection-page {
+
+    @media screen and (min-width: $screen--sm-min) {
         margin-top: 32px;
     }
 
@@ -14,11 +18,11 @@
         z-index: 1;
         background: rgba(255, 255, 255, 0.8);
 
-        @media screen and (min-width: 601px) {
-            box-shadow: 10px 10px 30px #FFF;
+        @media screen and (min-width: $screen--sm-min) {
+            box-shadow: 10px 10px 30px $primary-white;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             padding: 16px;
             justify-content: center;
         }
@@ -33,7 +37,7 @@
         border-collapse: collapse;
         border-spacing: 4px;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-top: 40px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             border-radius: 24px;
@@ -41,15 +45,15 @@
     }
 
     &__row {
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $primary-black;
 
         &:first-child {
-            background-color: #F7DF1E;
+            background-color: $primary-yellow;
             border-radius: 24px;
         }
 
         &:last-child {
-            @media screen and (min-width: 601px) {
+            @media screen and (min-width: $screen--sm-min) {
                 border-bottom: none;
             }
         }
@@ -59,10 +63,10 @@
         padding: 15px;
         text-transform: uppercase;
         font-family: "Lato-Black";
-        font-size: 16px;
+        font-size: $text-base;
 
-        @media screen and (max-width: 600px) {
-            font-size: 14px;
+        @media screen and (max-width: $screen--xs-max) {
+            font-size: $text-sm;
         }
 
         &:first-child {
@@ -79,10 +83,10 @@
 
         &--title {
             font-family: "Lato-Regular";
-            font-size: 18px;
+            font-size: $text-lg;
 
-            @media screen and (max-width: 600px) {
-                font-size: 14px;
+            @media screen and (max-width: $screen--xs-max) {
+                font-size: $text-sm;
             }
         }
     }
@@ -96,7 +100,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-top: 16px;
             margin-left: -16px;
             margin-right: -16px;

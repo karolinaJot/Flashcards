@@ -1,10 +1,13 @@
-﻿.flashcards-page {
+﻿@import "../global/media.scss";
+
+.flashcards-page {
     margin-top: 16px;
-    @media screen and (min-width: 601px) {
+
+    @media screen and (min-width: $screen--sm-min) {
         margin-top: 24px;
     }
 
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: $screen-lg-min) {
         width: 60%;
     }
 
@@ -28,7 +31,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-right: 16px;
             margin-bottom: 8px;
         }
@@ -41,7 +44,7 @@
         padding: 0 92px;
         width: 100%;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             flex-wrap: nowrap;
             justify-content: space-around;
         }
@@ -50,7 +53,7 @@
     &__button {
         width: 30%;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             border-radius: 50%;
             padding: 8px;
             width: auto;
@@ -58,7 +61,7 @@
     }
 
     &__switch-button {
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             border-radius: 50%;
             padding: 8px;
             width: auto;
@@ -67,13 +70,13 @@
     }
 
     &__button-icon {
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-right: 8px;
         }
     }
 
     &__button-text {
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             display: none;
         }
     }
