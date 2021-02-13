@@ -1,5 +1,6 @@
 ﻿@import "./typography.scss";
 @import "../global/colors.scss";
+@import "../global/media.scss";
 
 body {
     margin: 0;
@@ -34,7 +35,7 @@ body {
     font-size: $text-xs;
     font-weight: 500;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $screen--xs-max) {
         padding: 16px;
     }
 }

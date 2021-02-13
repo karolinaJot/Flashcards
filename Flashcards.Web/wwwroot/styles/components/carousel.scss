@@ -1,10 +1,12 @@
-﻿.carousel {
+﻿@import "../global/media.scss";
+
+.carousel {
     position: relative;
     margin-bottom: 24px;
     height: 100%;
     width: 100%;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $screen--xs-max) {
         margin-bottom: 0;
     }
 
@@ -17,7 +19,7 @@
         overflow: auto;
         height: 100%;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             padding: 0 52px;
         }
     }

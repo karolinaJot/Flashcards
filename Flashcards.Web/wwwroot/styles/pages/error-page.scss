@@ -1,5 +1,6 @@
 ﻿@import "../global/typography.scss";
 @import "../global/colors.scss";
+@import "../global/media.scss";
 
 .error-page {
     padding: 24px;
@@ -15,7 +16,7 @@
     top: 83px;
     bottom: 0;
 
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: $screen--sm-min) {
         padding: 40px;
     }
 
@@ -29,7 +30,7 @@
         height: 45%;
         justify-content: flex-end;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             font-size: $text-6xl;
             margin-right: 10%;
         }

@@ -1,4 +1,6 @@
-﻿.form-page {
+﻿@import "../global/media.scss";
+
+.form-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,10 +11,10 @@
         margin: 48px 24px 64px 24px;
         width: 66.666%;
 
-        @media screen and (max-width: 600px) {
-           margin: 0;
-           width: 100%;
-           height: 100%;
+        @media screen and (max-width: $screen--xs-max) {
+            margin: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }

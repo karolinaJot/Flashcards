@@ -1,9 +1,10 @@
 ﻿@import "../global/typography.scss";
 @import "../global/colors.scss";
+@import "../global/media.scss";
 
 .collection-page {
 
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: $screen--sm-min) {
         margin-top: 32px;
     }
 
@@ -17,11 +18,11 @@
         z-index: 1;
         background: rgba(255, 255, 255, 0.8);
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             box-shadow: 10px 10px 30px $primary-white;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             padding: 16px;
             justify-content: center;
         }
@@ -36,7 +37,7 @@
         border-collapse: collapse;
         border-spacing: 4px;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-top: 40px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             border-radius: 24px;
@@ -52,7 +53,7 @@
         }
 
         &:last-child {
-            @media screen and (min-width: 601px) {
+            @media screen and (min-width: $screen--sm-min) {
                 border-bottom: none;
             }
         }
@@ -64,7 +65,7 @@
         font-family: "Lato-Black";
         font-size: $text-base;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: $screen--xs-max) {
             font-size: $text-sm;
         }
 
@@ -84,7 +85,7 @@
             font-family: "Lato-Regular";
             font-size: $text-lg;
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: $screen--xs-max) {
                 font-size: $text-sm;
             }
         }
@@ -99,7 +100,7 @@
         flex-wrap: wrap;
         justify-content: flex-start;
 
-        @media screen and (min-width: 601px) {
+        @media screen and (min-width: $screen--sm-min) {
             margin-top: 16px;
             margin-left: -16px;
             margin-right: -16px;
