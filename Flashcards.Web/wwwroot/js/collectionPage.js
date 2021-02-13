@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				singleCard.appendChild(singleCardTButtonsContainer);
 			}
 		} else {
-
-			alert("Sorry, your collection is empty! Hit the Create button below to start!");
+			const createContainer = document.querySelector(".collection-page");
+			alert("Sorry, your collection is empty! Hit the Create button to start!");
 			//jeśli w bazie nie ma fiszek to wyświetla się wyłącznie button CREATE
 			displayCreateButton(createContainer);
 		}
