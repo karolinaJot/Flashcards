@@ -29,9 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		
 		} else {
 
-			alert("Sorry, there is no flashcards in here! Hit the Create button below!");
+			alert("Sorry, there is no flashcards in here! Hit the Create button!");
 			//jeśli w bazie nie ma fiszek to wyświetla się wyłącznie button CREATE
-			displayCreateButton(btnsContainer);
 		}
 
 
@@ -64,14 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			return i;
 		}
 
-		function displayCreateButton(htmlDivEl) {
-			htmlDivEl.innerHTML = `
-				<a class="button button--secondary flashcards-page__button" href="/Flashcards/ShowForm">
-					<i class="icon icon--xs icon--add flashcards-page__button-icon"></i>
-					<span class="flashcards-page__button-text">Create</span>
-				</a>	
-			`;
-		}
+		
 	};
 	getAll();
 });
