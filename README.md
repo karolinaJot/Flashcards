@@ -37,9 +37,10 @@ This application allows User to create his own customise set of flashcards and t
   - communication, 
   - conducting the whole project remote only, without any "real" meetings with my partner.
   
-  ## ANIA: What I learnt:
+ ## ANIA: What I learnt:
 - Using Issues to control workflow of the project;
-- Using Scss;
+- Using scss variables;
+- Create reusable styles for global elements e.g. buttons;
 - Connect wit MSSQL;
 - Develop git workflow;
 - How to create simple ASP.NET Core project;
