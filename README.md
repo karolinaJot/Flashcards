@@ -43,7 +43,7 @@ This application allows User to create his own customise set of flashcards and t
 - Create reusable styles for global elements e.g. buttons;
 - Connect wit MSSQL;
 - Develop git workflow;
-- How to create simple ASP.NET Core project;
+- Using BEM metodology naming convention;
 - Cooperate with cooworker;
 
 		
