@@ -31,6 +31,7 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public IActionResult ShowForm(FlashcardsModel flashcardModel)
 		{
 			if (ModelState.IsValid)
