@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	async function getAll() {
 
-		//dodać walidację jeśli nie będzie żadnej fiszki
 		const response = await fetch(endpoint);
 		const flashcardsData =await response.json();
 		const flashcardsObjArray = flashcardsData.data;
 
-		const btnsContainer = document.getElementById('btn-container');
+		//const btnsContainer = document.getElementById('btn-container');
 		const prevBtn = document.getElementById("prev");
 		const nextBtn = document.getElementById("next");
 		const titleContainer = document.querySelector("#flashcard-title h2");
@@ -30,14 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 
 			alert("Sorry, there is no flashcards in here! Hit the Create button!");
-			//jeśli w bazie nie ma fiszek to wyświetla się wyłącznie button CREATE
+			
 		}
 
 
 //---------- deklaracje funkcji użytych powyżej -------------------
 		function displayFirstFlashcard(htmlTitleEl,htmlDescrEl,data, i) {
-			htmlTitleEl.innerHTML = `${data[i].title}`;
-			htmlDescrEl.innerHTML = `${data[i].description}`;
+			htmlTitleEl.textContent = `${data[i].title}`;
+			htmlDescrEl.textContent = `${data[i].description}`;
 		}
 
 		function navigateCarousel(htmlNextBtnEl, htmlPrevBtnEl, htmlTitleEl, htmlDescrEl, data, i ) {
@@ -46,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (i > data.length - 1) {
 					i = 0;
 				}
-				htmlTitleEl.innerHTML = `${data[i].title}`;
-				htmlDescrEl.innerHTML = `${data[i].description}`;
+				htmlTitleEl.textContent = `${data[i].title}`;
+				htmlDescrEl.textContent = `${data[i].description}`;
 				return i;
 			});
 
@@ -56,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 				if (i < 0) {
 					i = data.length - 1;
 				}
-				htmlTitleEl.innerHTML = `${data[i].title}`;
-				htmlDescrEl.innerHTML = `${data[i].description}`;
+				htmlTitleEl.textContent = `${data[i].title}`;
+				htmlDescrEl.textContent = `${data[i].description}`;
 				return i;
 			});
 			return i;
