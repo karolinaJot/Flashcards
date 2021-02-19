@@ -49,19 +49,38 @@ document.addEventListener("DOMContentLoaded", function () {
 				// create list view
 				let row = document.createElement("tr");
 				row.classList.add("collection-page__row");
-				row.innerHTML = `
-				<td class="collection-page__cell collection-page__cell--title">${flashcardsObjArray[i].title}</td>
-				<td class="collection-page__cell">
-					<a class="button button--secondary button--small collection-page__button" href="/Flashcards/Edit/${flashcardsObjArray[i].id}">
-						<i class="icon icon--xs icon--edit"></i>
-					</a>
-				</td>
-				<td class="collection-page__cell">
-					<a class="button button--secondary button--small collection-page__button" href="/Flashcards/Delete/${flashcardsObjArray[i].id}">
-						<i class="icon icon--xs icon--delete"></i>
-					</a>
-				</td>
-				`;
+
+				//wyświetla title
+				let tdTitle = document.createElement("td");
+				tdTitle.classList.add("collection-page__cell", "collection-page__cell--title");
+				tdTitle.textContent = flashcardsObjArray[i].title;
+				row.appendChild(tdTitle);
+
+				// tworzy i wyświetla Edit btn
+				let tdEdit = document.createElement("td");
+				tdEdit.classList.add("collection-page__cell");
+				let aEdit = document.createElement("a");
+				aEdit.classList.add("button", "button--secondary", "button--small", "collection-page__button");
+				aEdit.setAttribute("href", `/Flashcards/Edit/${flashcardsObjArray[i].id}`);
+				let iEdit = document.createElement("i");
+				iEdit.classList.add("icon", "icon--xs", "icon--edit");
+				aEdit.appendChild(iEdit);
+				tdEdit.appendChild(aEdit);
+				row.appendChild(tdEdit);
+
+				//tworzy i wyświetla Delete btn
+				let tdDelete = document.createElement("td");
+				tdDelete.classList.add("collection-page__cell");
+				let aDelete = document.createElement("a");
+				aDelete.classList.add("button", "button--secondary", "button--small", "collection-page__button");
+				aDelete.setAttribute("href", `/Flashcards/Delete/${flashcardsObjArray[i].id}`);
+				let iDelete = document.createElement("i");
+				iDelete.classList.add("icon", "icon--xs", "icon--delete");
+				aDelete.appendChild(iDelete);
+				tdDelete.appendChild(aDelete);
+				row.appendChild(tdDelete);
+
+				//dodanie fiszki do listy
 				flashcardsList.appendChild(row);
 
 				// create cards view
@@ -72,35 +91,50 @@ document.addEventListener("DOMContentLoaded", function () {
 				const singleCardTitle = document.createElement("p");
 				singleCardTitle.classList.add("card__title");
 				singleCard.appendChild(singleCardTitle);
-				singleCardTitle.innerHTML += flashcardsObjArray[i].title;
+				singleCardTitle.textContent += flashcardsObjArray[i].title;
 
 				const singleCardTButtonsContainer = document.createElement("div");
 				singleCardTButtonsContainer.classList.add("card__buttons-container");
-				singleCardTButtonsContainer.innerHTML = 
-				`
-					<a class="button button--secondary button--small h-margin-right-8 h-margin-left-8" href="/Flashcards/Edit/${flashcardsObjArray[i].id}">
-						<i class="icon icon--xs icon--edit"></i>
-					</a>
-					<a class="button button--secondary button--small h-margin-right-8 h-margin-left-8" href="/Flashcards/Delete/${flashcardsObjArray[i].id}">
-						<i class="icon icon--xs icon--delete"></i>
-					</a>
-				`
+				// Edit btn
+				let aCardEdit = document.createElement("a");
+				aCardEdit.classList.add("button", "button--secondary", "button--small", "h-margin-right-8", "h-margin-left-8");
+				aCardEdit.setAttribute("href", `/Flashcards/Edit/${flashcardsObjArray[i].id}`);
+				let iCardEdit = document.createElement("i");
+				iCardEdit.classList.add("icon", "icon--xs", "icon--edit");
+				aCardEdit.appendChild(iCardEdit);
+
+				//Delete btn
+				let aCardDelete = document.createElement("a");
+				aCardDelete.classList.add("button", "button--secondary", "button--small", "h-margin-right-8", "h-margin-left-8");
+				aCardDelete.setAttribute("href", `/Flashcards/Delete/${flashcardsObjArray[i].id}`);
+				let iCardDelete = document.createElement("i");
+				iCardDelete.classList.add("icon", "icon--xs", "icon--delete");
+				aCardDelete.appendChild(iCardDelete);
+
+				singleCardTButtonsContainer.appendChild(aCardEdit);
+				singleCardTButtonsContainer.appendChild(aCardDelete);
+
 				singleCard.appendChild(singleCardTButtonsContainer);
 			}
 		} else {
-			const createContainer = document.querySelector(".collection-page");
 			alert("Sorry, your collection is empty! Hit the Create button to start!");
 			//jeśli w bazie nie ma fiszek to wyświetla się wyłącznie button CREATE
+			const createContainer = document.querySelector(".collection-page");
 			displayCreateButton(createContainer);
 		}
 
 		function displayCreateButton(htmlDivEl) {
-			htmlDivEl.innerHTML = `
-				<a class="button button--secondary" href="/Flashcards/ShowForm">
-					<i class="icon icon--xs icon--add h-margin-right-8"></i>
-					<span class="">Create</span>
-				</a>	
-			`;
+			let aCreate = document.createElement("a");
+			aCreate.classList.add("button", "button--secondary");
+			aCreate.setAttribute("href", "/Flashcards/ShowForm");
+			let iCreate = document.createElement("i");
+			iCreate.classList.add("icon", "icon--xs", "icon--add", "h-margin-right-8");
+			let spanCreate = document.createElement("span");
+			spanCreate.textContent = "Create";
+
+			aCreate.appendChild(iCreate);
+			aCreate.appendChild(spanCreate);
+			htmlDivEl.appendChild(aCreate);
 		}
 
 	};
