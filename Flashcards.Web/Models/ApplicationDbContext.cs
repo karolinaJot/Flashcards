@@ -13,10 +13,10 @@ namespace Flashcards.Web.Models
 		{
 
 		}
-		protected override void OnModelCreating(ModelBuilder builder)
-		{
+		//protected override void OnModelCreating(ModelBuilder builder)
+		//{
 
-		}
+		//}
 
 		public DbSet<FlashcardEntity> FlashcardsJS { get; set; }
 	}
