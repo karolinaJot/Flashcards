@@ -12,7 +12,7 @@ namespace Flashcards.Web.Models
 		public ApplicationDbContext CreateDbContext(string[] args)
 		{
 			var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-			optionsBuilder.UseSqlServer("Data Source=tcp:flashcards-v1-webdbserver.database.windows.net,1433; Initial Catalog=Flashcards.Web_db; User Id=karolina@flashcards-v1-webdbserver; Password=71A3Hc$R8S");
+			optionsBuilder.UseSqlServer("Your connection string");
 			return new ApplicationDbContext(optionsBuilder.Options);
 		}
 	}
