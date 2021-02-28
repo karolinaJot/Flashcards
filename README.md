@@ -1,5 +1,5 @@
 # Flashcards
-### Welcome in our web [Flashcards Applications](https://flashcardsweb20210223115723v2.azurewebsites.net/)!
+### Welcome in our web [Flashcards Applications!](https://flashcardsweb20210223115723v2.azurewebsites.net/)
 
 This project was carried out from our great desire to learn and passion for developing programming skills. It is a team project, built by **Karolina Jaklik** (karolinaJot) and **Anna Mika** (aniamika). We are Computer Science students at WSEI Krakow in Poland.
 In this Flashcards application we used **ASP.NET Core 3.1 MVC** and **JavaScript ES6**.
