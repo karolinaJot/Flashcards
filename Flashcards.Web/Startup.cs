@@ -26,7 +26,8 @@ namespace Flashcards.Web
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-			services.AddIdentity<IdentityUser, IdentityRole>();
+			services.AddIdentity<IdentityUser, IdentityRole>()
+				.AddEntityFrameworkStores<ApplicationDbContext>();
 			services.AddControllersWithViews();
 		}
 
@@ -43,6 +44,7 @@ namespace Flashcards.Web
 				app.UseStatusCodePagesWithRedirects("/Home/{0}");
 			}
 			app.UseStaticFiles();
+			app.UseAuthentication();
 
 			app.UseRouting();
 
