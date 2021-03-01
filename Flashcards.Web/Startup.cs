@@ -1,6 +1,7 @@
 using Flashcards.Web.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,13 @@ namespace Flashcards.Web
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			
+			services.AddIdentity<IdentityUser, IdentityRole>(options =>
+			{
+				options.Password.RequiredLength = 10;
+				options.Password.RequiredUniqueChars = 3;
+			}).AddEntityFrameworkStores<ApplicationDbContext>();
+			
 			services.AddControllersWithViews();
 		}
 
@@ -41,6 +49,7 @@ namespace Flashcards.Web
 				app.UseStatusCodePagesWithRedirects("/Home/{0}");
 			}
 			app.UseStaticFiles();
+			app.UseAuthentication();
 
 			app.UseRouting();
 

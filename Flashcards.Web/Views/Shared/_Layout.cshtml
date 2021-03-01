@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+@inject SignInManager<IdentityUser> singInManager;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -35,19 +37,39 @@
             Flashcards
         </a>
         <nav class="header__navigation">
-            <ul class="header__list">
+			<ul class="header__list">
+				<li class="header__list-item">
+					<a class="" asp-area="" asp-controller="Flashcards" asp-action="CollectionPage">Your Collections</a>
+				</li>
+				<li class="header__list-item">
+					<a class="" asp-area="" asp-controller="Flashcards" asp-action="DisplayFlashcard">Training</a>
+				</li>
+				@if (singInManager.IsSignedIn(User))
+				{
+					<li class="header__list-item">
+                        <form method="post" asp-action="Logout" asp-controller="Account">
+                            <button type="submit" style="width:auto">
+                                Logout @User.Identity.Name
+                            </button>
+                        </form>
+					</li>
+				}
+				else
+				{ 
+				<li class="header__list-item">
+					<a class="" asp-controller="Account" asp-action="Register">Register</a>
+				</li>
                 <li class="header__list-item">
-                    <a class="" asp-area="" asp-controller="Flashcards" asp-action="CollectionPage">Your Collections</a>
-                </li>
-                <li class="header__list-item">
-                    <a class="" asp-area="" asp-controller="Flashcards" asp-action="DisplayFlashcard">Training</a>
-                </li>
-                <li class="header__list-item">
-                    <a asp-controller="Flashcards" asp-action="ShowForm" alt="" class="button button--secondary header__list-item-button">
-                        create
-                    </a>
-                </li>
-            </ul>
+					<a class="" asp-controller="Account" asp-action="Login">Login</a>
+				</li>
+                
+                }
+				<li class="header__list-item">
+					<a asp-controller="Flashcards" asp-action="ShowForm" alt="" class="button button--secondary header__list-item-button">
+						create
+					</a>
+				</li>
+			</ul>
         </nav>
         <button class="header__hamburger-button">
             <i class="icon icon--hamburger icon--sm"> </i>
