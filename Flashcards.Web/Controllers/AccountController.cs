@@ -19,7 +19,13 @@ namespace Flashcards.Web.Controllers
 			_userManager = userManager;
 			_singnInManager = signInManager;
 		}
-		
+
+		[HttpPost]
+		public async Task<IActionResult> Logout()
+		{
+			await _singnInManager.SignOutAsync();
+			return RedirectToAction("Index", "Flashcards");
+		}
 		
 		[HttpGet]
 		public IActionResult Register()
@@ -28,6 +34,7 @@ namespace Flashcards.Web.Controllers
 		}
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Register(RegisterModel model)
 		{
 			if (ModelState.IsValid)
