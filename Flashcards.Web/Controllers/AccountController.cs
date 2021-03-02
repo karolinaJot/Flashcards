@@ -33,6 +33,7 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
+		
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Register(RegisterModel model)
@@ -55,6 +56,32 @@ namespace Flashcards.Web.Controllers
 			}
 
 
+			return View(model);
+		}
+
+		[HttpGet]
+		public IActionResult Login()
+		{
+			return View();
+		}
+		
+		
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task <IActionResult> Login(LoginModel model)
+		{
+			if (ModelState.IsValid)
+			{
+				var result = await _singnInManager.PasswordSignInAsync(model.Email, model.Password, 
+												model.RememberMe, false);
+
+				if (result.Succeeded)
+				{
+					return RedirectToAction("CollectionPage", "Flashcards");
+				}
+				ModelState.AddModelError(string.Empty, "Invalid Name or Password");
+
+			}
 			return View(model);
 		}
 	}
