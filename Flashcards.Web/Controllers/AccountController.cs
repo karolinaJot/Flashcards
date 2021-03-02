@@ -33,6 +33,7 @@ namespace Flashcards.Web.Controllers
 			return View();
 		}
 
+		//test
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Register(RegisterModel model)
